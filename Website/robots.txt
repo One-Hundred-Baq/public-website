@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://probable-adventure-ny3z8ke.pages.github.io/sitemap.xml
