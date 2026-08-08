@@ -72,10 +72,10 @@ export default function ChatPanel() {
       id="chat"
       className="mx-auto max-w-2xl overflow-hidden rounded-[2rem] border border-line bg-surface/90 text-left shadow-[0_30px_80px_-20px_rgba(0,0,0,0.55)] backdrop-blur-xl"
     >
-      <div className="flex items-center justify-between px-6 pb-2 pt-6">
-        <strong className="text-sm">{t("chat.title")}</strong>
-        <span className="flex items-center gap-2 text-xs text-ink-muted">
-          <span className="h-2 w-2 rounded-full bg-success" aria-hidden />
+      <div className="flex flex-wrap items-center justify-between gap-x-3 gap-y-1 px-6 pb-2 pt-6">
+        <strong className="whitespace-nowrap text-sm">{t("chat.title")}</strong>
+        <span className="flex shrink-0 items-center gap-2 whitespace-nowrap text-xs text-ink-muted">
+          <span className="h-2 w-2 shrink-0 rounded-full bg-success" aria-hidden />
           {t("chat.status")}
         </span>
       </div>
