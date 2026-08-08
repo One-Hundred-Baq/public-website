@@ -3,6 +3,7 @@
 import { motion, useReducedMotion } from "framer-motion";
 import { useSite } from "@/lib/providers";
 import ChatPanel from "./ChatPanel";
+import GradientGlow from "./GradientGlow";
 
 export default function Hero() {
   const { t } = useSite();
@@ -18,7 +19,8 @@ export default function Hero() {
   };
 
   return (
-    <section id="top" className="px-6 pb-16 pt-20 text-center md:pt-28">
+    <section id="top" className="relative px-6 pb-16 pt-20 text-center md:pt-28">
+      <GradientGlow variant="hero" />
       <motion.div
         className="mx-auto max-w-3xl"
         variants={container}
@@ -27,7 +29,7 @@ export default function Hero() {
       >
         <motion.p
           variants={item}
-          className="mb-4 font-mono text-sm uppercase tracking-wider text-accent"
+          className="mb-4 text-sm uppercase tracking-wider text-accent"
         >
           {t("hero.eyebrow")}
         </motion.p>

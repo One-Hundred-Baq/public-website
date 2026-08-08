@@ -9,7 +9,7 @@ export default function Investors() {
     <section id="invest" className="border-t border-line py-20">
       <div className="mx-auto max-w-6xl px-6">
         <Reveal>
-          <p className="mb-3 font-mono text-xs uppercase tracking-wider text-accent">
+          <p className="mb-3 text-xs uppercase tracking-wider text-accent">
             {t("invest.label")}
           </p>
           <h2 className="mb-6 max-w-2xl text-2xl font-bold">{t("invest.h2")}</h2>

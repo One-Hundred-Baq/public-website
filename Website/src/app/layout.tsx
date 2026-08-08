@@ -1,18 +1,19 @@
 import type { Metadata } from "next";
-import { Inter, JetBrains_Mono } from "next/font/google";
+import { Rubik, Audiowide } from "next/font/google";
 import "./globals.css";
 import { SiteProvider, noFlashScript } from "@/lib/providers";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
-const inter = Inter({
-  variable: "--font-inter",
+const rubik = Rubik({
+  variable: "--font-rubik",
   subsets: ["latin"],
   display: "swap",
 });
 
-const jetbrainsMono = JetBrains_Mono({
-  variable: "--font-jetbrains-mono",
+const audiowide = Audiowide({
+  variable: "--font-audiowide",
+  weight: "400",
   subsets: ["latin"],
   display: "swap",
 });
@@ -48,7 +49,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
       lang="es"
-      className={`${inter.variable} ${jetbrainsMono.variable}`}
+      className={`${rubik.variable} ${audiowide.variable}`}
       suppressHydrationWarning
     >
       <head>

@@ -1,16 +1,18 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
 import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
 import { useSite } from "@/lib/providers";
 
 const NAV_ITEMS = [
-  { href: "#about", key: "nav.about" as const },
-  { href: "#think", key: "nav.think" as const },
-  { href: "#proof", key: "nav.proof" as const },
-  { href: "#invest", key: "nav.invest" as const },
-  { href: "#faq", key: "nav.faq" as const },
-  { href: "#contact", key: "nav.contact" as const },
+  { href: "/#about", key: "nav.about" as const },
+  { href: "/services", key: "nav.services" as const },
+  { href: "/#think", key: "nav.think" as const },
+  { href: "/#proof", key: "nav.proof" as const },
+  { href: "/#invest", key: "nav.invest" as const },
+  { href: "/#faq", key: "nav.faq" as const },
+  { href: "/#contact", key: "nav.contact" as const },
 ];
 
 export default function Header() {
@@ -21,30 +23,24 @@ export default function Header() {
   return (
     <header className="sticky top-0 z-50 border-b border-line bg-canvas/90 backdrop-blur-md">
       <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-6 py-4">
-        <a
-          href="#top"
-          className="flex items-center gap-2 font-mono text-lg font-bold no-underline"
+        <Link
+          href="/#top"
+          className="font-logo text-lg tracking-wide text-ink no-underline lowercase"
           aria-label="One Hundred"
           onClick={() => setMenuOpen(false)}
         >
-          <span
-            aria-hidden
-            className="flex h-7 w-7 items-center justify-center rounded-full border-2 border-accent text-[0.6rem] text-accent"
-          >
-            100
-          </span>
-          <span>one hundred</span>
-        </a>
+          one hundred
+        </Link>
 
         <nav className="hidden items-center gap-6 md:flex" aria-label="Main">
           {NAV_ITEMS.map((item) => (
-            <a
+            <Link
               key={item.href}
               href={item.href}
               className="text-sm text-ink-muted transition-colors hover:text-ink"
             >
               {t(item.key)}
-            </a>
+            </Link>
           ))}
         </nav>
 
@@ -77,14 +73,14 @@ export default function Header() {
           >
             <div className="flex flex-col gap-1 px-6 py-4">
               {NAV_ITEMS.map((item) => (
-                <a
+                <Link
                   key={item.href}
                   href={item.href}
                   className="rounded-lg px-2 py-3 text-sm text-ink-muted transition-colors hover:bg-surface hover:text-ink"
                   onClick={() => setMenuOpen(false)}
                 >
                   {t(item.key)}
-                </a>
+                </Link>
               ))}
               <div className="mt-2 flex items-center gap-2 px-2">
                 <ToggleButtons lang={lang} setLang={setLang} theme={theme} toggleTheme={toggleTheme} />
@@ -112,7 +108,7 @@ function ToggleButtons({
     <>
       <button
         type="button"
-        className="rounded-lg border border-line px-3 py-2 font-mono text-xs text-ink-muted transition-colors hover:border-accent hover:text-accent"
+        className="rounded-lg border border-line px-3 py-2 text-xs text-ink-muted transition-colors hover:border-accent hover:text-accent"
         aria-label="Toggle language"
         onClick={() => setLang(lang === "es" ? "en" : "es")}
       >

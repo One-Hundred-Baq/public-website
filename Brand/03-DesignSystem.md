@@ -4,8 +4,8 @@ Implementable specification. Matching CSS custom properties live in `tokens/desi
 
 ## Typography
 
-- **UI / body**: `Inter` (fallback: `system-ui, -apple-system, "Segoe UI", sans-serif`) — chosen for legibility at small sizes in both Spanish and English, and because it's free, well-hinted, and widely cached (no licensing cost, no custom-font commission — Principio 7).
-- **Data / evidence accent**: `"JetBrains Mono"` (fallback: `"SF Mono", Consolas, monospace`) — reserved exclusively for numbers, prices, stats, timestamps, and code. This is the visual signal that something is a fact, not marketing copy.
+- **UI / body / headings**: `Rubik` (fallback: `system-ui, -apple-system, "Segoe UI", sans-serif`) — used for everything except the logo. Free, variable-weight, well-hinted at small sizes in both Spanish and English (no licensing cost, no custom-font commission — Principio 7). Superseded the earlier Inter/JetBrains Mono pairing per founder direction; the dedicated "evidence" mono accent was dropped — stat/data emphasis is now carried by weight and accent color instead of a separate typeface.
+- **Logo wordmark only**: `Audiowide` (single weight, 400) — used exclusively for the "one hundred" text wordmark in the header. Never used for body copy, headings, or UI text.
 
 Type scale (rem, 16px base):
 
@@ -32,7 +32,8 @@ Dark-first. Both themes fully specified — see tokens file for exact values as 
 - Text secondary: `#9A9AA2`
 - Accent: `#F5A623` (gold — deliberately not blue/purple, to avoid reading as "one more Linear/Stripe clone")
 - Accent hover: `#FFBB47`
-- Success: `#3DD68C`
+- Success: `#3DD68C` (non-text UI only — status dots, badge fills; passes the 3:1 non-text threshold, not the 4.5:1 text one)
+- Success (as text): `#3DD68C` — same value works fine as text in dark mode
 - Warning: `#F5A623`
 - Danger: `#F0554A`
 
@@ -44,7 +45,8 @@ Dark-first. Both themes fully specified — see tokens file for exact values as 
 - Text secondary: `#5C5C66`
 - Accent: `#96640D` (darkened for AA contrast on white — 5.09:1)
 - Accent hover: `#7A5209`
-- Success: `#1E9E63`
+- Success: `#1E9E63` (non-text UI only)
+- Success (as text): `#146B45` — `#1E9E63` fails AA as text on light backgrounds (3.20:1); darkened specifically for the text use case, same bug pattern as the accent fix above
 - Warning: `#96640D`
 - Danger: `#C93A30`
 

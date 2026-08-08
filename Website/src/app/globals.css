@@ -15,6 +15,7 @@
   --raw-accent: #f5a623;
   --raw-accent-hover: #ffbb47;
   --raw-success: #3dd68c;
+  --raw-success-text: #3dd68c;
   --raw-warning: #f5a623;
   --raw-danger: #f0554a;
 }
@@ -28,6 +29,7 @@
   --raw-accent: #96640d;
   --raw-accent-hover: #7a5209;
   --raw-success: #1e9e63;
+  --raw-success-text: #146b45;
   --raw-warning: #96640d;
   --raw-danger: #c93a30;
 }
@@ -42,6 +44,7 @@
     --raw-accent: #96640d;
     --raw-accent-hover: #7a5209;
     --raw-success: #1e9e63;
+    --raw-success-text: #146b45;
     --raw-warning: #96640d;
     --raw-danger: #c93a30;
   }
@@ -56,10 +59,11 @@
   --color-accent: var(--raw-accent);
   --color-accent-hover: var(--raw-accent-hover);
   --color-success: var(--raw-success);
+  --color-success-text: var(--raw-success-text);
   --color-warning: var(--raw-warning);
   --color-danger: var(--raw-danger);
-  --font-sans: var(--font-inter);
-  --font-mono: var(--font-jetbrains-mono);
+  --font-sans: var(--font-rubik);
+  --font-logo: var(--font-audiowide);
 }
 
 html {
@@ -69,7 +73,7 @@ html {
 body {
   background: var(--raw-canvas);
   color: var(--raw-ink);
-  font-family: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  font-family: var(--font-rubik), ui-sans-serif, system-ui, sans-serif;
 }
 
 @media (prefers-reduced-motion: reduce) {

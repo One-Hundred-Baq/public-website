@@ -10,7 +10,7 @@ export default function PrivacyPage() {
   return (
     <div className="mx-auto max-w-2xl px-6 py-16">
       <h1 className="mb-2 text-2xl font-bold">Privacidad</h1>
-      <p className="mb-10 font-mono text-xs text-ink-muted">
+      <p className="mb-10 text-xs text-ink-muted">
         Última actualización: 2026-08-07. Este documento describe lo que el sitio realmente
         hace hoy — no es una plantilla legal genérica, y no ha sido revisado por un abogado.
       </p>

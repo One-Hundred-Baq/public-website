@@ -16,14 +16,14 @@ Precise, engineering-grade, restrained. The visual system should read like proof
 
 ## Logo Concept
 
-A numeral-based mark: **"100"** built from geometric strokes where both zeros are perfect circles/rings — read simultaneously as "complete," "a score cleared," and "a target hit." Two lockups:
+**Decided (founder direction, supersedes the numeral-primary concept below): the primary logo is a text-only wordmark**, `one hundred` set in lowercase in **Audiowide** — a single-weight display typeface reserved exclusively for this use, never for body copy, headings, or UI text (see `03-DesignSystem.md`). This is what actually ships in the site header today.
 
-- **Mark**: standalone "100" — used as favicon, app icon, avatar, anywhere space is tight.
-- **Wordmark**: "One Hundred" in the primary typeface, set in all lowercase (`one hundred`) — used in formal/full-width contexts (letterhead, pitch deck cover, footer).
+The numeral **"100"** ring mark (geometric strokes, both zeros as perfect circles) is retained narrowly as the **favicon / small-icon mark only** — resolving the "Open Evaluation" below in practice: it survives at favicon size, so it stays there, but it doesn't appear in-page next to the wordmark anymore.
 
-The mark and wordmark are never merged into a single lockup with a symbol/icon bolted on — the numeral geometry of "100" already carries the icon role.
+*(Original two-lockup concept, kept for reference — no longer how the logo ships:)*
 
-*(This concept is directional and ready for a designer to render as vector; the geometry rule and construction constraints below are the part actually binding on execution.)*
+- ~~Mark: standalone "100" used anywhere space is tight~~ — narrowed to favicon/small-icon only.
+- ~~Wordmark: "One Hundred" in the primary typeface~~ — now Audiowide specifically, not the body typeface.
 
 ## Open Evaluation — Symbolic Mark vs. Numeral-Only (per Execution Review, not yet decided)
 

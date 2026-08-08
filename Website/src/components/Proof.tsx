@@ -18,7 +18,7 @@ export default function Proof() {
     <section id="proof" className="border-t border-line py-20">
       <div className="mx-auto max-w-6xl px-6">
         <Reveal>
-          <p className="mb-3 font-mono text-xs uppercase tracking-wider text-accent">
+          <p className="mb-3 text-xs uppercase tracking-wider text-accent">
             {t("proof.label")}
           </p>
           <h2 className="mb-10 max-w-2xl text-2xl font-bold">{t("proof.h2")}</h2>
@@ -43,7 +43,7 @@ export default function Proof() {
               }}
               className="rounded-xl border border-line bg-surface p-6"
             >
-              <span className="mb-2 block font-mono text-2xl text-accent">{s.num}</span>
+              <span className="mb-2 block text-2xl text-accent">{s.num}</span>
               <span className="text-sm text-ink-muted">{s.label}</span>
             </motion.div>
           ))}

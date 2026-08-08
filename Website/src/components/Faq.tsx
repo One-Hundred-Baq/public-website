@@ -21,7 +21,7 @@ export default function Faq() {
     <section id="faq" className="border-t border-line py-20">
       <div className="mx-auto max-w-6xl px-6">
         <Reveal>
-          <p className="mb-3 font-mono text-xs uppercase tracking-wider text-accent">
+          <p className="mb-3 text-xs uppercase tracking-wider text-accent">
             {t("faq.label")}
           </p>
           <h2 className="mb-8 max-w-2xl text-2xl font-bold">{t("faq.h2")}</h2>
@@ -69,7 +69,7 @@ function FaqItem({
         <span>{question}</span>
         <motion.span
           aria-hidden
-          className="font-mono text-accent"
+          className="text-accent"
           animate={{ rotate: isOpen ? 45 : 0 }}
           transition={{ duration: prefersReducedMotion ? 0 : 0.2 }}
         >

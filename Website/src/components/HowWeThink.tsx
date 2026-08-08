@@ -14,7 +14,7 @@ export default function HowWeThink() {
     <section id="think" className="border-t border-line py-20">
       <div className="mx-auto max-w-6xl px-6">
         <Reveal>
-          <p className="mb-3 font-mono text-xs uppercase tracking-wider text-accent">
+          <p className="mb-3 text-xs uppercase tracking-wider text-accent">
             {t("think.label")}
           </p>
           <h2 className="mb-10 max-w-2xl text-2xl font-bold">{t("think.h2")}</h2>
@@ -40,7 +40,7 @@ export default function HowWeThink() {
               whileHover={prefersReducedMotion ? undefined : { y: -4 }}
               className="rounded-xl border border-line bg-surface p-6 transition-colors hover:border-accent/50"
             >
-              <span className="mb-3 block font-mono text-sm text-accent">
+              <span className="mb-3 block text-sm text-accent">
                 {String(i + 1).padStart(2, "0")}
               </span>
               <h3 className="mb-2 text-base font-semibold">{t(`think.${key}.h` as const)}</h3>
