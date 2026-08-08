@@ -21,9 +21,9 @@
 }
 
 :root[data-theme="light"] {
-  --raw-canvas: #ffffff;
-  --raw-surface: #f7f7f8;
-  --raw-line: #e3e3e6;
+  --raw-canvas: #faf9f5;
+  --raw-surface: #f4f2ec;
+  --raw-line: #e5e2d9;
   --raw-ink: #111113;
   --raw-ink-muted: #5c5c66;
   --raw-accent: #96640d;
@@ -36,9 +36,9 @@
 
 @media (prefers-color-scheme: light) {
   :root:not([data-theme="dark"]) {
-    --raw-canvas: #ffffff;
-    --raw-surface: #f7f7f8;
-    --raw-line: #e3e3e6;
+    --raw-canvas: #faf9f5;
+    --raw-surface: #f4f2ec;
+    --raw-line: #e5e2d9;
     --raw-ink: #111113;
     --raw-ink-muted: #5c5c66;
     --raw-accent: #96640d;

@@ -38,12 +38,12 @@ Dark-first. Both themes fully specified — see tokens file for exact values as 
 - Danger: `#F0554A`
 
 **Light**
-- Background: `#FFFFFF`
-- Surface: `#F7F7F8`
-- Border: `#E3E3E6`
+- Background: `#FAF9F5` (warm off-white, not stark white — editorial reference point, deliberately closer to Vite's `#f4f3ec` than to a generic SaaS white)
+- Surface: `#F4F2EC`
+- Border: `#E5E2D9`
 - Text primary: `#111113`
 - Text secondary: `#5C5C66`
-- Accent: `#96640D` (darkened for AA contrast on white — 5.09:1)
+- Accent: `#96640D` (darkened for AA contrast on the warm background — 4.83:1 on canvas, 4.55:1 on surface)
 - Accent hover: `#7A5209`
 - Success: `#1E9E63` (non-text UI only)
 - Success (as text): `#146B45` — `#1E9E63` fails AA as text on light backgrounds (3.20:1); darkened specifically for the text use case, same bug pattern as the accent fix above

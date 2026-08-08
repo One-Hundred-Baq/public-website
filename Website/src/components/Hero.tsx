@@ -22,7 +22,7 @@ export default function Hero() {
   };
 
   return (
-    <section id="top" className="relative px-6 pb-16 pt-20 text-center md:pt-28">
+    <section id="top" className="relative px-6 pb-16 pt-24 text-center md:pt-32">
       <SectionGlow variant="gold" />
       <motion.div
         className="mx-auto max-w-3xl"
@@ -30,6 +30,14 @@ export default function Hero() {
         initial="hidden"
         animate="show"
       >
+        <motion.div variants={item} className="mb-8 flex justify-center">
+          <span
+            aria-hidden
+            className="flex h-14 w-14 items-center justify-center rounded-full border-2 border-accent text-sm text-accent"
+          >
+            100
+          </span>
+        </motion.div>
         <motion.div variants={item} className="mb-6 flex justify-center">
           <span className="inline-flex items-center gap-2 rounded-full border border-line bg-surface px-4 py-1.5 text-xs text-ink-muted">
             <span className="h-1.5 w-1.5 rounded-full bg-success" aria-hidden />

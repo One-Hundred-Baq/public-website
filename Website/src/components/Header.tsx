@@ -1,16 +1,20 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
 import { useSite } from "@/lib/providers";
 
-const NAV_ITEMS = [
-  { href: "/about", key: "nav.about" as const },
+const NAV_PRIMARY = [
   { href: "/services", key: "nav.services" as const },
-  { href: "/#think", key: "nav.think" as const },
-  { href: "/#proof", key: "nav.proof" as const },
+  { href: "/how-we-think", key: "nav.think" as const },
   { href: "/capital", key: "nav.invest" as const },
+];
+
+const NAV_DROPDOWN = [
+  { href: "/about", key: "nav.about" as const },
+  { href: "/case-study", key: "nav.casestudy" as const },
+  { href: "/technology", key: "nav.technology" as const },
   { href: "/#faq", key: "nav.faq" as const },
   { href: "/#contact", key: "nav.contact" as const },
 ];
@@ -18,10 +22,30 @@ const NAV_ITEMS = [
 export default function Header() {
   const { t, lang, setLang, theme, toggleTheme } = useSite();
   const [menuOpen, setMenuOpen] = useState(false);
+  const [dropdownOpen, setDropdownOpen] = useState(false);
+  const dropdownRef = useRef<HTMLDivElement>(null);
   const prefersReducedMotion = useReducedMotion();
 
+  useEffect(() => {
+    if (!dropdownOpen) return;
+    function onPointerDown(e: PointerEvent) {
+      if (dropdownRef.current && !dropdownRef.current.contains(e.target as Node)) {
+        setDropdownOpen(false);
+      }
+    }
+    function onKeyDown(e: KeyboardEvent) {
+      if (e.key === "Escape") setDropdownOpen(false);
+    }
+    document.addEventListener("pointerdown", onPointerDown);
+    document.addEventListener("keydown", onKeyDown);
+    return () => {
+      document.removeEventListener("pointerdown", onPointerDown);
+      document.removeEventListener("keydown", onKeyDown);
+    };
+  }, [dropdownOpen]);
+
   return (
-    <header className="sticky top-0 z-50 border-b border-line bg-canvas/90 backdrop-blur-md">
+    <header className="sticky top-0 z-50 border-b border-line bg-canvas/80 backdrop-blur-md">
       <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-6 py-4">
         <Link
           href="/#top"
@@ -32,8 +56,8 @@ export default function Header() {
           one hundred
         </Link>
 
-        <nav className="hidden items-center gap-6 md:flex" aria-label="Main">
-          {NAV_ITEMS.map((item) => (
+        <nav className="hidden items-center gap-7 md:flex" aria-label="Main">
+          {NAV_PRIMARY.map((item) => (
             <Link
               key={item.href}
               href={item.href}
@@ -42,6 +66,48 @@ export default function Header() {
               {t(item.key)}
             </Link>
           ))}
+
+          <div className="relative" ref={dropdownRef}>
+            <button
+              type="button"
+              aria-haspopup="true"
+              aria-expanded={dropdownOpen}
+              onClick={() => setDropdownOpen((v) => !v)}
+              className="flex items-center gap-1 text-sm text-ink-muted transition-colors hover:text-ink"
+            >
+              {t("nav.company")}
+              <motion.span
+                aria-hidden
+                animate={{ rotate: dropdownOpen ? 180 : 0 }}
+                transition={{ duration: 0.15 }}
+                className="text-xs"
+              >
+                ⌄
+              </motion.span>
+            </button>
+            <AnimatePresence>
+              {dropdownOpen && (
+                <motion.div
+                  initial={{ opacity: 0, y: -4 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -4 }}
+                  transition={{ duration: prefersReducedMotion ? 0 : 0.15 }}
+                  className="absolute right-0 top-full mt-3 w-48 overflow-hidden rounded-xl border border-line bg-surface py-2 shadow-xl"
+                >
+                  {NAV_DROPDOWN.map((item) => (
+                    <Link
+                      key={item.href}
+                      href={item.href}
+                      onClick={() => setDropdownOpen(false)}
+                      className="block px-4 py-2.5 text-sm text-ink-muted no-underline transition-colors hover:bg-canvas hover:text-ink"
+                    >
+                      {t(item.key)}
+                    </Link>
+                  ))}
+                </motion.div>
+              )}
+            </AnimatePresence>
+          </div>
         </nav>
 
         <div className="hidden items-center gap-3 md:flex">
@@ -78,7 +144,7 @@ export default function Header() {
             className="overflow-hidden border-b border-line md:hidden"
           >
             <div className="flex flex-col gap-1 px-6 py-4">
-              {NAV_ITEMS.map((item) => (
+              {[...NAV_PRIMARY, ...NAV_DROPDOWN].map((item) => (
                 <Link
                   key={item.href}
                   href={item.href}

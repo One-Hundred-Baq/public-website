@@ -57,9 +57,9 @@
 }
 
 :root[data-theme="light"] {
-  --color-bg: #FFFFFF;
-  --color-surface: #F7F7F8;
-  --color-border: #E3E3E6;
+  --color-bg: #FAF9F5;
+  --color-surface: #F4F2EC;
+  --color-border: #E5E2D9;
   --color-text: #111113;
   --color-text-secondary: #5C5C66;
   --color-accent: #96640D;
@@ -73,9 +73,9 @@
 /* Respect system preference when no explicit theme is set */
 @media (prefers-color-scheme: light) {
   :root:not([data-theme="dark"]) {
-    --color-bg: #FFFFFF;
-    --color-surface: #F7F7F8;
-    --color-border: #E3E3E6;
+    --color-bg: #FAF9F5;
+    --color-surface: #F4F2EC;
+    --color-border: #E5E2D9;
     --color-text: #111113;
     --color-text-secondary: #5C5C66;
     --color-accent: #96640D;
