@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://probable-adventure-ny3z8ke.pages.github.io/sitemap.xml
+Sitemap: https://one-hundred-baq.github.io/public-website/sitemap.xml
