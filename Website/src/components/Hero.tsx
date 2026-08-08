@@ -4,7 +4,7 @@ import { motion, useReducedMotion } from "framer-motion";
 import Link from "next/link";
 import { useSite } from "@/lib/providers";
 import ChatPanel from "./ChatPanel";
-import AtmosphereBg from "./AtmosphereBg";
+import SectionGlow from "./SectionGlow";
 import HeroVisual from "./HeroVisual";
 import StepsPills from "./StepsPills";
 
@@ -23,7 +23,7 @@ export default function Hero() {
 
   return (
     <section id="top" className="relative px-6 pb-16 pt-20 text-center md:pt-28">
-      <AtmosphereBg variant="gold" />
+      <SectionGlow variant="gold" />
       <motion.div
         className="mx-auto max-w-3xl"
         variants={container}

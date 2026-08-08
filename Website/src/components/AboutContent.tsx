@@ -2,7 +2,7 @@
 
 import { useSite } from "@/lib/providers";
 import Reveal from "./Reveal";
-import AtmosphereBg from "./AtmosphereBg";
+import SectionGlow from "./SectionGlow";
 import HeroVisual from "./HeroVisual";
 import ChatPanel from "./ChatPanel";
 
@@ -23,7 +23,7 @@ export default function AboutContent() {
   return (
     <main id="main" className="flex-1">
       <section className="relative px-6 pb-16 pt-20 text-center md:pt-28">
-        <AtmosphereBg variant="gold" />
+        <SectionGlow variant="gold" />
         <div className="mx-auto max-w-3xl">
           <p className="mb-4 text-sm uppercase tracking-wider text-accent">
             {t("aboutpage.eyebrow")}
@@ -34,7 +34,8 @@ export default function AboutContent() {
         </div>
       </section>
 
-      <section className="border-t border-line py-16">
+      <section className="relative border-t border-line py-16">
+        <SectionGlow variant="green" />
         <div className="mx-auto grid max-w-6xl gap-8 px-6 sm:grid-cols-2">
           <Reveal>
             <p className="mb-3 text-xs uppercase tracking-wider text-accent">
@@ -51,7 +52,8 @@ export default function AboutContent() {
         </div>
       </section>
 
-      <section className="border-t border-line py-16">
+      <section className="relative border-t border-line py-16">
+        <SectionGlow variant="mixed" />
         <div className="mx-auto max-w-3xl px-6">
           <Reveal>
             <p className="mb-8 text-center text-xs uppercase tracking-wider text-accent">
@@ -70,7 +72,8 @@ export default function AboutContent() {
         </div>
       </section>
 
-      <section className="border-t border-line py-16">
+      <section className="relative border-t border-line py-16">
+        <SectionGlow variant="warm" />
         <div className="mx-auto max-w-6xl px-6">
           <Reveal>
             <p className="mb-3 text-xs uppercase tracking-wider text-accent">
@@ -94,7 +97,7 @@ export default function AboutContent() {
       </section>
 
       <section className="relative border-t border-line py-16">
-        <AtmosphereBg variant="gold" />
+        <SectionGlow variant="gold" />
         <div className="mx-auto max-w-3xl px-6 text-center">
           <Reveal>
             <p className="mb-3 text-xs uppercase tracking-wider text-accent">

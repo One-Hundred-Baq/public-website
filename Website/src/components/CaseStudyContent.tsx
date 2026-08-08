@@ -3,7 +3,7 @@
 import { motion, useReducedMotion } from "framer-motion";
 import { useSite } from "@/lib/providers";
 import Reveal from "./Reveal";
-import AtmosphereBg from "./AtmosphereBg";
+import SectionGlow from "./SectionGlow";
 import HeroVisual from "./HeroVisual";
 import ChatPanel from "./ChatPanel";
 
@@ -16,7 +16,7 @@ export default function CaseStudyContent() {
   return (
     <main id="main" className="flex-1">
       <section className="relative px-6 pb-16 pt-20 text-center md:pt-28">
-        <AtmosphereBg variant="green" />
+        <SectionGlow variant="green" />
         <div className="mx-auto max-w-3xl">
           <p className="mb-4 text-sm uppercase tracking-wider text-accent">{t("case.eyebrow")}</p>
           <h1 className="mb-5 text-[clamp(2rem,4.5vw+1rem,3.25rem)] font-bold leading-[1.1] tracking-tight">
@@ -26,7 +26,8 @@ export default function CaseStudyContent() {
         </div>
       </section>
 
-      <section className="border-t border-line py-16">
+      <section className="relative border-t border-line py-16">
+        <SectionGlow variant="gold" />
         <div className="mx-auto max-w-6xl px-6">
           <Reveal>
             <p className="mb-3 text-xs uppercase tracking-wider text-accent">
@@ -40,7 +41,8 @@ export default function CaseStudyContent() {
         </div>
       </section>
 
-      <section className="border-t border-line py-16">
+      <section className="relative border-t border-line py-16">
+        <SectionGlow variant="mixed" />
         <div className="mx-auto max-w-6xl px-6">
           <Reveal>
             <p className="mb-3 text-xs uppercase tracking-wider text-accent">
@@ -78,7 +80,8 @@ export default function CaseStudyContent() {
         </div>
       </section>
 
-      <section className="border-t border-line py-16">
+      <section className="relative border-t border-line py-16">
+        <SectionGlow variant="warm" />
         <div className="mx-auto max-w-6xl px-6">
           <Reveal>
             <p className="mb-3 text-xs uppercase tracking-wider text-accent">
@@ -92,7 +95,8 @@ export default function CaseStudyContent() {
         </div>
       </section>
 
-      <section className="border-t border-line py-16">
+      <section className="relative border-t border-line py-16">
+        <SectionGlow variant="green" />
         <div className="mx-auto max-w-3xl px-6">
           <Reveal>
             <div className="rounded-2xl border border-line bg-surface p-8">
@@ -108,7 +112,7 @@ export default function CaseStudyContent() {
       </section>
 
       <section className="relative border-t border-line py-16">
-        <AtmosphereBg variant="green" />
+        <SectionGlow variant="green" />
         <div className="mx-auto max-w-3xl px-6 text-center">
           <Reveal>
             <p className="mb-3 text-xs uppercase tracking-wider text-accent">

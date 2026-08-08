@@ -3,11 +3,13 @@
 import Link from "next/link";
 import { useSite } from "@/lib/providers";
 import Reveal from "./Reveal";
+import SectionGlow from "./SectionGlow";
 
 export default function Investors() {
   const { t } = useSite();
   return (
-    <section id="invest" className="border-t border-line py-20">
+    <section id="invest" className="relative border-t border-line py-20">
+      <SectionGlow variant="warm" />
       <div className="mx-auto max-w-6xl px-6">
         <Reveal>
           <p className="mb-3 text-xs uppercase tracking-wider text-accent">

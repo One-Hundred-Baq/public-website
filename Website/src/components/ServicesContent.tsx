@@ -3,7 +3,7 @@
 import { motion, useReducedMotion } from "framer-motion";
 import { useSite } from "@/lib/providers";
 import Reveal from "./Reveal";
-import AtmosphereBg from "./AtmosphereBg";
+import SectionGlow from "./SectionGlow";
 import ChatPanel from "./ChatPanel";
 import HeroVisual from "./HeroVisual";
 
@@ -17,7 +17,7 @@ export default function ServicesContent() {
   return (
     <main id="main" className="flex-1">
       <section className="relative px-6 pb-16 pt-20 text-center md:pt-28">
-        <AtmosphereBg variant="green" />
+        <SectionGlow variant="green" />
         <div className="mx-auto max-w-3xl">
           <p className="mb-4 text-sm uppercase tracking-wider text-accent">
             {t("services.eyebrow")}
@@ -30,7 +30,8 @@ export default function ServicesContent() {
       </section>
 
       {/* Flagship package — marketplace-style listing */}
-      <section className="border-t border-line py-16">
+      <section className="relative border-t border-line py-16">
+        <SectionGlow variant="gold" />
         <div className="mx-auto max-w-4xl px-6">
           <Reveal>
             <div className="rounded-3xl border border-line bg-surface p-8 shadow-xl shadow-black/10 md:p-10">
@@ -77,7 +78,8 @@ export default function ServicesContent() {
       </section>
 
       {/* Delivery steps */}
-      <section className="border-t border-line py-16">
+      <section className="relative border-t border-line py-16">
+        <SectionGlow variant="mixed" />
         <div className="mx-auto max-w-6xl px-6">
           <Reveal>
             <p className="mb-3 text-xs uppercase tracking-wider text-accent">
@@ -104,7 +106,8 @@ export default function ServicesContent() {
       </section>
 
       {/* Pricing honesty */}
-      <section className="border-t border-line py-16">
+      <section className="relative border-t border-line py-16">
+        <SectionGlow variant="warm" />
         <div className="mx-auto max-w-6xl px-6">
           <Reveal>
             <p className="mb-3 text-xs uppercase tracking-wider text-accent">
@@ -120,7 +123,7 @@ export default function ServicesContent() {
 
       {/* CTA — the agent itself */}
       <section className="relative border-t border-line py-16">
-        <AtmosphereBg variant="green" />
+        <SectionGlow variant="green" />
         <div className="mx-auto max-w-3xl px-6 text-center">
           <Reveal>
             <p className="mb-3 text-xs uppercase tracking-wider text-accent">

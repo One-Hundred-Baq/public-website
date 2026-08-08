@@ -2,11 +2,13 @@
 
 import { useSite } from "@/lib/providers";
 import Reveal from "./Reveal";
+import SectionGlow from "./SectionGlow";
 
 export default function Contact() {
   const { t } = useSite();
   return (
-    <section id="contact" className="border-t border-line py-20">
+    <section id="contact" className="relative border-t border-line py-20">
+      <SectionGlow variant="green" />
       <div className="mx-auto max-w-6xl px-6">
         <Reveal>
           <p className="mb-3 text-xs uppercase tracking-wider text-accent">

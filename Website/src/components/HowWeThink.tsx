@@ -4,6 +4,7 @@ import Link from "next/link";
 import { motion, useReducedMotion } from "framer-motion";
 import { useSite } from "@/lib/providers";
 import Reveal from "./Reveal";
+import SectionGlow from "./SectionGlow";
 
 const CARD_KEYS = ["c1", "c2", "c3", "c4", "c5", "c6"] as const;
 
@@ -12,7 +13,8 @@ export default function HowWeThink() {
   const prefersReducedMotion = useReducedMotion();
 
   return (
-    <section id="think" className="border-t border-line py-20">
+    <section id="think" className="relative border-t border-line py-20">
+      <SectionGlow variant="mixed" />
       <div className="mx-auto max-w-6xl px-6">
         <Reveal>
           <p className="mb-3 text-xs uppercase tracking-wider text-accent">

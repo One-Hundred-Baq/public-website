@@ -4,6 +4,7 @@ import { useId, useState } from "react";
 import { motion, AnimatePresence, useReducedMotion } from "framer-motion";
 import { useSite } from "@/lib/providers";
 import Reveal from "./Reveal";
+import SectionGlow from "./SectionGlow";
 
 const FAQ_PAIRS = [
   { q: "faq.q1", a: "faq.a1" },
@@ -18,7 +19,8 @@ export default function Faq() {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   return (
-    <section id="faq" className="border-t border-line py-20">
+    <section id="faq" className="relative border-t border-line py-20">
+      <SectionGlow variant="gold" />
       <div className="mx-auto max-w-6xl px-6">
         <Reveal>
           <p className="mb-3 text-xs uppercase tracking-wider text-accent">

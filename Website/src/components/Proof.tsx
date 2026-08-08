@@ -4,6 +4,7 @@ import Link from "next/link";
 import { motion, useReducedMotion } from "framer-motion";
 import { useSite } from "@/lib/providers";
 import Reveal from "./Reveal";
+import SectionGlow from "./SectionGlow";
 
 export default function Proof() {
   const { t } = useSite();
@@ -16,7 +17,8 @@ export default function Proof() {
   ];
 
   return (
-    <section id="proof" className="border-t border-line py-20">
+    <section id="proof" className="relative border-t border-line py-20">
+      <SectionGlow variant="green" />
       <div className="mx-auto max-w-6xl px-6">
         <Reveal>
           <p className="mb-3 text-xs uppercase tracking-wider text-accent">

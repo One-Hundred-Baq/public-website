@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { useSite } from "@/lib/providers";
 import Reveal from "./Reveal";
-import AtmosphereBg from "./AtmosphereBg";
+import SectionGlow from "./SectionGlow";
 
 const PRINCIPLES = ["c1", "c2", "c3", "c4", "c5", "c6"] as const;
 
@@ -13,7 +13,7 @@ export default function ThinkContent() {
   return (
     <main id="main" className="flex-1">
       <section className="relative px-6 pb-16 pt-20 text-center md:pt-28">
-        <AtmosphereBg variant="mixed" />
+        <SectionGlow variant="mixed" />
         <div className="mx-auto max-w-3xl">
           <p className="mb-4 text-sm uppercase tracking-wider text-accent">
             {t("thinkpage.eyebrow")}
@@ -25,7 +25,8 @@ export default function ThinkContent() {
         </div>
       </section>
 
-      <section className="border-t border-line py-16">
+      <section className="relative border-t border-line py-16">
+        <SectionGlow variant="green" />
         <div className="mx-auto max-w-4xl px-6 space-y-12">
           {PRINCIPLES.map((key, i) => (
             <Reveal key={key} delay={i * 0.05}>
@@ -49,7 +50,7 @@ export default function ThinkContent() {
       </section>
 
       <section className="relative border-t border-line py-16 text-center">
-        <AtmosphereBg variant="mixed" />
+        <SectionGlow variant="mixed" />
         <div className="mx-auto max-w-3xl px-6">
           <Reveal>
             <p className="mb-3 text-xs uppercase tracking-wider text-accent">
