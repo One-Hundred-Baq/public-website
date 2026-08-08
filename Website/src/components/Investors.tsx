@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useSite } from "@/lib/providers";
 import Reveal from "./Reveal";
 
@@ -23,6 +24,14 @@ export default function Investors() {
           <p className="mt-4 max-w-2xl border-l-2 border-accent pl-4 text-sm text-ink-muted">
             {t("invest.p2")}
           </p>
+        </Reveal>
+        <Reveal delay={0.2}>
+          <Link
+            href="/capital"
+            className="mt-6 inline-block text-sm font-semibold text-accent no-underline hover:text-accent-hover"
+          >
+            {t("invest.readmore")} →
+          </Link>
         </Reveal>
       </div>
     </section>

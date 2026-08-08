@@ -5,6 +5,7 @@ import { useSite } from "@/lib/providers";
 import Reveal from "./Reveal";
 import GradientGlow from "./GradientGlow";
 import ChatPanel from "./ChatPanel";
+import HeroVisual from "./HeroVisual";
 
 const MODULES = ["module1", "module2", "module3", "module4"] as const;
 const STEPS = ["delivery1", "delivery2", "delivery3"] as const;
@@ -120,14 +121,18 @@ export default function ServicesContent() {
       {/* CTA — the agent itself */}
       <section className="relative border-t border-line py-16">
         <GradientGlow variant="section" />
-        <div className="mx-auto max-w-6xl px-6 text-center">
+        <div className="mx-auto max-w-3xl px-6 text-center">
           <Reveal>
             <p className="mb-3 text-xs uppercase tracking-wider text-accent">
               {t("services.cta.label")}
             </p>
             <h2 className="mb-10 text-2xl font-bold">{t("services.cta.h2")}</h2>
           </Reveal>
-          <ChatPanel />
+          <Reveal delay={0.1}>
+            <HeroVisual>
+              <ChatPanel />
+            </HeroVisual>
+          </Reveal>
         </div>
       </section>
     </main>

@@ -6,11 +6,11 @@ import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
 import { useSite } from "@/lib/providers";
 
 const NAV_ITEMS = [
-  { href: "/#about", key: "nav.about" as const },
+  { href: "/about", key: "nav.about" as const },
   { href: "/services", key: "nav.services" as const },
   { href: "/#think", key: "nav.think" as const },
   { href: "/#proof", key: "nav.proof" as const },
-  { href: "/#invest", key: "nav.invest" as const },
+  { href: "/capital", key: "nav.invest" as const },
   { href: "/#faq", key: "nav.faq" as const },
   { href: "/#contact", key: "nav.contact" as const },
 ];
@@ -44,8 +44,14 @@ export default function Header() {
           ))}
         </nav>
 
-        <div className="hidden items-center gap-2 md:flex">
+        <div className="hidden items-center gap-3 md:flex">
           <ToggleButtons lang={lang} setLang={setLang} theme={theme} toggleTheme={toggleTheme} />
+          <Link
+            href="/#chat"
+            className="rounded-full bg-accent px-4 py-2 text-sm font-semibold text-canvas no-underline transition-colors hover:bg-accent-hover"
+          >
+            {t("nav.cta")}
+          </Link>
         </div>
 
         <button
@@ -85,6 +91,13 @@ export default function Header() {
               <div className="mt-2 flex items-center gap-2 px-2">
                 <ToggleButtons lang={lang} setLang={setLang} theme={theme} toggleTheme={toggleTheme} />
               </div>
+              <Link
+                href="/#chat"
+                onClick={() => setMenuOpen(false)}
+                className="mx-2 mt-2 rounded-full bg-accent px-4 py-3 text-center text-sm font-semibold text-canvas no-underline"
+              >
+                {t("nav.cta")}
+              </Link>
             </div>
           </motion.nav>
         )}
