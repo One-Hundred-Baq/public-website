@@ -1,0 +1,110 @@
+@import "tailwindcss";
+
+/* Raw, theme-switchable values. Kept under a distinct --raw-* prefix so the
+   @theme block below (which generates the Tailwind color tokens of the same
+   conceptual name) never self-references. Values are identical to, and must
+   stay in sync with, the ones previously verified for WCAG AA contrast in
+   the static site (Brand/tokens/design-tokens.css is the design source of
+   truth). */
+:root {
+  --raw-canvas: #0a0a0b;
+  --raw-surface: #151517;
+  --raw-line: #2a2a2e;
+  --raw-ink: #f5f5f7;
+  --raw-ink-muted: #9a9aa2;
+  --raw-accent: #f5a623;
+  --raw-accent-hover: #ffbb47;
+  --raw-success: #3dd68c;
+  --raw-warning: #f5a623;
+  --raw-danger: #f0554a;
+}
+
+:root[data-theme="light"] {
+  --raw-canvas: #ffffff;
+  --raw-surface: #f7f7f8;
+  --raw-line: #e3e3e6;
+  --raw-ink: #111113;
+  --raw-ink-muted: #5c5c66;
+  --raw-accent: #96640d;
+  --raw-accent-hover: #7a5209;
+  --raw-success: #1e9e63;
+  --raw-warning: #96640d;
+  --raw-danger: #c93a30;
+}
+
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme="dark"]) {
+    --raw-canvas: #ffffff;
+    --raw-surface: #f7f7f8;
+    --raw-line: #e3e3e6;
+    --raw-ink: #111113;
+    --raw-ink-muted: #5c5c66;
+    --raw-accent: #96640d;
+    --raw-accent-hover: #7a5209;
+    --raw-success: #1e9e63;
+    --raw-warning: #96640d;
+    --raw-danger: #c93a30;
+  }
+}
+
+@theme inline {
+  --color-canvas: var(--raw-canvas);
+  --color-surface: var(--raw-surface);
+  --color-line: var(--raw-line);
+  --color-ink: var(--raw-ink);
+  --color-ink-muted: var(--raw-ink-muted);
+  --color-accent: var(--raw-accent);
+  --color-accent-hover: var(--raw-accent-hover);
+  --color-success: var(--raw-success);
+  --color-warning: var(--raw-warning);
+  --color-danger: var(--raw-danger);
+  --font-sans: var(--font-inter);
+  --font-mono: var(--font-jetbrains-mono);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--raw-canvas);
+  color: var(--raw-ink);
+  font-family: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+.skip-link:focus {
+  clip: auto;
+  width: auto;
+  height: auto;
+  position: fixed;
+  top: 1rem;
+  left: 1rem;
+  z-index: 100;
+  background: var(--raw-accent);
+  color: var(--raw-canvas);
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+}

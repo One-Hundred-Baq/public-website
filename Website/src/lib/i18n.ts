@@ -1,9 +1,10 @@
-// One Hundred — site copy, ES/EN. Every string here is either evidence-backed
-// (Osman Vergara delivery, First Principles) or explicitly framed as unproven/early.
-// No client counts, revenue figures, or projections beyond what's cited in
-// OneHundred-Workspace are ever added here — see Brand/01-BrandStrategy.md.
+// One Hundred — site copy, ES/EN. Every string is either evidence-backed
+// (Osman Vergara delivery, First Principles) or explicitly framed as
+// unproven/early. See Brand/01-BrandStrategy.md for the source reasoning.
 
-const I18N = {
+export type Lang = "es" | "en";
+
+export const dictionaries = {
   es: {
     "nav.about": "Nosotros",
     "nav.think": "Cómo pensamos",
@@ -49,7 +50,7 @@ const I18N = {
     "think.c5.h": "La plataforma antes que el caso puntual",
     "think.c5.p": "Si resolver algo para un cliente debilita el motor compartido, lo documentamos como un trade-off — no lo escondemos.",
     "think.c6.h": "Crecer sin depender de personas específicas",
-    "think.c6.p": "El conocimiento se queda en el ecosistema, no en la cabeza de alguien. Así es como esto escala sin volverse fràgil.",
+    "think.c6.p": "El conocimiento se queda en el ecosistema, no en la cabeza de alguien. Así es como esto escala sin volverse frágil.",
     "invest.label": "Por qué esto escala",
     "invest.h2": "Cada cliente no es un proyecto aislado. Es una prueba más del mismo motor.",
     "invest.p1": "Una agencia vende tiempo que no se acumula: cada proyecto nuevo empieza de cero. One Hundred vende y reutiliza un motor — cada entrega deja un activo que hace más rápida y más barata la siguiente. Eso es lo que compone valor, no la factura de un solo cliente.",
@@ -71,9 +72,9 @@ const I18N = {
     "contact.p1": "No existe hoy un formulario, correo de ventas o CRM conectado. La conversación con el agente arriba es, honestamente, la única vía directa mientras se conecta un canal adicional.",
     "contact.cta": "Hablar con el agente",
     "footer.cta": "Hablemos ↑",
-    "footer.fine": "© 2026 One Hundred. Sitio en construcción activa — Execution Order 002.",
+    "footer.fine": "© 2026 One Hundred. Sitio en construcción activa.",
     "footer.privacy": "Privacidad",
-    "footer.terms": "Términos"
+    "footer.terms": "Términos",
   },
   en: {
     "nav.about": "About",
@@ -142,8 +143,10 @@ const I18N = {
     "contact.p1": "There's no form, sales email, or connected CRM today. The conversation with the agent above is, honestly, the only direct channel while another one gets connected.",
     "contact.cta": "Talk to the agent",
     "footer.cta": "Let's talk ↑",
-    "footer.fine": "© 2026 One Hundred. Actively under construction — Execution Order 002.",
+    "footer.fine": "© 2026 One Hundred. Actively under construction.",
     "footer.privacy": "Privacy",
-    "footer.terms": "Terms"
-  }
-};
+    "footer.terms": "Terms",
+  },
+} as const;
+
+export type DictKey = keyof typeof dictionaries.es;

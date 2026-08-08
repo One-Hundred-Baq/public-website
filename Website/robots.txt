@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://one-hundred-baq.github.io/public-website/sitemap.xml
