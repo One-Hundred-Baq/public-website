@@ -24,7 +24,7 @@ export default function Proof() {
           <p className="mb-4 text-xs uppercase tracking-wider text-accent">
             {t("proof.label")}
           </p>
-          <h2 className="mb-16 max-w-2xl text-3xl font-bold leading-tight tracking-tight md:text-4xl">
+          <h2 className="mb-16 max-w-2xl text-3xl leading-tight tracking-tight md:text-4xl">
             {t("proof.h2")}
           </h2>
         </Reveal>

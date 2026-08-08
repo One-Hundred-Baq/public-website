@@ -27,7 +27,7 @@ export default function CapitalContent() {
           <p className="mb-4 text-sm uppercase tracking-wider text-accent">
             {t("capital.eyebrow")}
           </p>
-          <h1 className="mb-5 text-[clamp(1.75rem,4vw+1rem,3rem)] font-bold leading-[1.15] tracking-tight">
+          <h1 className="mb-5 text-[clamp(1.75rem,4vw+1rem,3rem)] leading-[1.15] tracking-tight">
             {t("capital.h1")}
           </h1>
           <p className="mx-auto max-w-xl text-lg text-ink-muted">{t("capital.sub")}</p>
@@ -41,7 +41,7 @@ export default function CapitalContent() {
             <p className="mb-3 text-xs uppercase tracking-wider text-accent">
               {t("capital.what.label")}
             </p>
-            <h2 className="mb-12 max-w-2xl text-3xl font-bold leading-tight tracking-tight md:text-4xl">{t("capital.what.h2")}</h2>
+            <h2 className="mb-12 max-w-2xl text-3xl leading-tight tracking-tight md:text-4xl">{t("capital.what.h2")}</h2>
             <p className="max-w-2xl border-l-2 border-accent pl-4 text-sm text-ink-muted">
               {t("capital.what.p")}
             </p>
@@ -56,7 +56,7 @@ export default function CapitalContent() {
             <p className="mb-3 text-xs uppercase tracking-wider text-accent">
               {t("capital.funds.label")}
             </p>
-            <h2 className="mb-12 max-w-2xl text-3xl font-bold leading-tight tracking-tight md:text-4xl">{t("capital.funds.h2")}</h2>
+            <h2 className="mb-12 max-w-2xl text-3xl leading-tight tracking-tight md:text-4xl">{t("capital.funds.h2")}</h2>
           </Reveal>
           <motion.div
             className="grid grid-cols-1 gap-7 sm:grid-cols-2"
@@ -94,7 +94,7 @@ export default function CapitalContent() {
             <p className="mb-3 text-xs uppercase tracking-wider text-accent">
               {t("capital.milestones.label")}
             </p>
-            <h2 className="mb-12 max-w-2xl text-3xl font-bold leading-tight tracking-tight md:text-4xl">{t("capital.milestones.h2")}</h2>
+            <h2 className="mb-12 max-w-2xl text-3xl leading-tight tracking-tight md:text-4xl">{t("capital.milestones.h2")}</h2>
           </Reveal>
           <div className="max-w-2xl space-y-4">
             {MILESTONES.map((key, i) => (
@@ -119,7 +119,7 @@ export default function CapitalContent() {
               <p className="mb-3 text-xs uppercase tracking-wider text-danger">
                 {t("capital.risk.label")}
               </p>
-              <h2 className="mb-4 text-xl font-bold">{t("capital.risk.h2")}</h2>
+              <h2 className="mb-4 text-xl">{t("capital.risk.h2")}</h2>
               <p className="mb-3 text-sm text-ink-muted">{t("capital.risk.p1")}</p>
               <p className="mb-5 text-sm text-ink-muted">{t("capital.risk.p2")}</p>
               <a
@@ -142,7 +142,7 @@ export default function CapitalContent() {
             <p className="mb-3 text-xs uppercase tracking-wider text-accent">
               {t("capital.cta.label")}
             </p>
-            <h2 className="mb-12 text-3xl font-bold leading-tight tracking-tight md:text-4xl">{t("capital.cta.h2")}</h2>
+            <h2 className="mb-12 text-3xl leading-tight tracking-tight md:text-4xl">{t("capital.cta.h2")}</h2>
           </Reveal>
           <Reveal delay={0.1}>
             <HeroVisual variant="mixed" hasOpaqueContent>

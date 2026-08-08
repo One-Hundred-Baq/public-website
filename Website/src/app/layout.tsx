@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Rubik, Audiowide } from "next/font/google";
+import { Rubik, Audiowide, Instrument_Serif } from "next/font/google";
 import "./globals.css";
 import { SiteProvider, noFlashScript } from "@/lib/providers";
 import Header from "@/components/Header";
@@ -13,6 +13,13 @@ const rubik = Rubik({
 
 const audiowide = Audiowide({
   variable: "--font-audiowide",
+  weight: "400",
+  subsets: ["latin"],
+  display: "swap",
+});
+
+const instrumentSerif = Instrument_Serif({
+  variable: "--font-instrument-serif",
   weight: "400",
   subsets: ["latin"],
   display: "swap",
@@ -49,7 +56,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
       lang="es"
-      className={`${rubik.variable} ${audiowide.variable}`}
+      className={`${rubik.variable} ${audiowide.variable} ${instrumentSerif.variable}`}
       suppressHydrationWarning
     >
       <head>
@@ -57,7 +64,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
           httpEquiv="Content-Security-Policy"
           content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; connect-src 'self' https://*.cloudfunctions.net https://*.run.app; img-src 'self' data:; base-uri 'none'; frame-ancestors 'none'"
         />
-        <meta name="theme-color" content="#0a0a0b" />
+        <meta name="theme-color" content="#faf9f5" />
         <meta name="referrer" content="strict-origin-when-cross-origin" />
         <script dangerouslySetInnerHTML={{ __html: noFlashScript }} />
       </head>

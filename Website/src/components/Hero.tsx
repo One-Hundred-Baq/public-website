@@ -46,7 +46,7 @@ export default function Hero() {
         </motion.div>
         <motion.h1
           variants={item}
-          className="mb-5 text-[clamp(2rem,4.5vw+1rem,3.75rem)] font-bold leading-[1.1] tracking-tight"
+          className="mb-5 text-[clamp(2rem,4.5vw+1rem,3.75rem)] leading-[1.1] tracking-tight"
         >
           {t("hero.h1.a")} <span className="text-ink-muted">{t("hero.h1.b")}</span>
         </motion.h1>

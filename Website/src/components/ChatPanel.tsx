@@ -156,7 +156,7 @@ export default function ChatPanel() {
             type="submit"
             disabled={sending}
             aria-label={t("chat.send")}
-            className="ml-2 flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-accent text-canvas transition-colors hover:bg-accent-hover disabled:opacity-50"
+            className="ml-2 flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-ink text-canvas transition-opacity hover:opacity-90 disabled:opacity-50"
           >
             <ArrowUpIcon className="h-4 w-4" />
           </button>

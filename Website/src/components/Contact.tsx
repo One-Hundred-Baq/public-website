@@ -14,7 +14,7 @@ export default function Contact() {
           <p className="mb-4 text-xs uppercase tracking-wider text-accent">
             {t("contact.label")}
           </p>
-          <h2 className="mb-8 text-3xl font-bold leading-tight tracking-tight md:text-4xl">
+          <h2 className="mb-8 text-3xl leading-tight tracking-tight md:text-4xl">
             {t("contact.h2")}
           </h2>
         </Reveal>
@@ -26,7 +26,7 @@ export default function Contact() {
         <Reveal delay={0.18}>
           <a
             href="#chat"
-            className="mt-10 inline-block rounded-full bg-accent px-8 py-4 text-sm font-semibold text-canvas no-underline transition-colors hover:bg-accent-hover"
+            className="mt-10 inline-block rounded-full bg-ink px-8 py-4 text-sm font-semibold text-canvas no-underline transition-opacity hover:opacity-90"
           >
             {t("contact.cta")}
           </a>

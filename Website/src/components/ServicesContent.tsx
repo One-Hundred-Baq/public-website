@@ -22,7 +22,7 @@ export default function ServicesContent() {
           <p className="mb-4 text-sm uppercase tracking-wider text-accent">
             {t("services.eyebrow")}
           </p>
-          <h1 className="mb-5 text-[clamp(2rem,4.5vw+1rem,3.25rem)] font-bold leading-[1.1] tracking-tight">
+          <h1 className="mb-5 text-[clamp(2rem,4.5vw+1rem,3.25rem)] leading-[1.1] tracking-tight">
             {t("services.h1")}
           </h1>
           <p className="mx-auto max-w-xl text-lg text-ink-muted">{t("services.sub")}</p>
@@ -39,7 +39,7 @@ export default function ServicesContent() {
                 <span className="h-1.5 w-1.5 rounded-full bg-success" />
                 {t("services.package.tag")}
               </div>
-              <h2 className="mb-3 text-2xl font-bold">{t("services.package.name")}</h2>
+              <h2 className="mb-3 text-2xl">{t("services.package.name")}</h2>
               <p className="max-w-2xl text-sm text-ink-muted">{t("services.package.desc")}</p>
             </div>
           </Reveal>
@@ -85,7 +85,7 @@ export default function ServicesContent() {
             <p className="mb-3 text-xs uppercase tracking-wider text-accent">
               {t("services.delivery.label")}
             </p>
-            <h2 className="mb-12 max-w-2xl text-3xl font-bold leading-tight tracking-tight md:text-4xl">{t("services.delivery.h2")}</h2>
+            <h2 className="mb-12 max-w-2xl text-3xl leading-tight tracking-tight md:text-4xl">{t("services.delivery.h2")}</h2>
           </Reveal>
           <div className="grid grid-cols-1 gap-8 sm:grid-cols-3">
             {STEPS.map((key, i) => (
@@ -113,7 +113,7 @@ export default function ServicesContent() {
             <p className="mb-3 text-xs uppercase tracking-wider text-accent">
               {t("services.pricing.label")}
             </p>
-            <h2 className="mb-12 max-w-2xl text-3xl font-bold leading-tight tracking-tight md:text-4xl">{t("services.pricing.h2")}</h2>
+            <h2 className="mb-12 max-w-2xl text-3xl leading-tight tracking-tight md:text-4xl">{t("services.pricing.h2")}</h2>
             <p className="max-w-2xl border-l-2 border-accent pl-4 text-sm text-ink-muted">
               {t("services.pricing.p")}
             </p>
@@ -129,7 +129,7 @@ export default function ServicesContent() {
             <p className="mb-3 text-xs uppercase tracking-wider text-accent">
               {t("services.cta.label")}
             </p>
-            <h2 className="mb-12 text-3xl font-bold leading-tight tracking-tight md:text-4xl">{t("services.cta.h2")}</h2>
+            <h2 className="mb-12 text-3xl leading-tight tracking-tight md:text-4xl">{t("services.cta.h2")}</h2>
           </Reveal>
           <Reveal delay={0.1}>
             <HeroVisual variant="green" hasOpaqueContent>

@@ -26,7 +26,7 @@ export default function TechnologyContent() {
         <SectionGlow variant="mixed" />
         <div className="mx-auto max-w-3xl">
           <p className="mb-4 text-sm uppercase tracking-wider text-accent">{t("tech.eyebrow")}</p>
-          <h1 className="mb-5 text-[clamp(2rem,4.5vw+1rem,3.25rem)] font-bold leading-[1.1] tracking-tight">
+          <h1 className="mb-5 text-[clamp(2rem,4.5vw+1rem,3.25rem)] leading-[1.1] tracking-tight">
             {t("tech.h1")}
           </h1>
           <p className="mx-auto max-w-xl text-lg text-ink-muted">{t("tech.sub")}</p>
@@ -82,7 +82,7 @@ export default function TechnologyContent() {
             <p className="mb-3 text-xs uppercase tracking-wider text-accent">
               {t("tech.principle.label")}
             </p>
-            <h2 className="mb-12 max-w-2xl text-3xl font-bold leading-tight tracking-tight md:text-4xl">{t("tech.principle.h2")}</h2>
+            <h2 className="mb-12 max-w-2xl text-3xl leading-tight tracking-tight md:text-4xl">{t("tech.principle.h2")}</h2>
             <p className="max-w-2xl border-l-2 border-accent pl-4 text-sm text-ink-muted">
               {t("tech.principle.p")}
             </p>
@@ -97,7 +97,7 @@ export default function TechnologyContent() {
             <p className="mb-3 text-xs uppercase tracking-wider text-accent">
               {t("tech.cta.label")}
             </p>
-            <h2 className="mb-12 text-3xl font-bold leading-tight tracking-tight md:text-4xl">{t("tech.cta.h2")}</h2>
+            <h2 className="mb-12 text-3xl leading-tight tracking-tight md:text-4xl">{t("tech.cta.h2")}</h2>
           </Reveal>
           <Reveal delay={0.1}>
             <HeroVisual variant="mixed" hasOpaqueContent>

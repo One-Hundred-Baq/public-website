@@ -114,7 +114,7 @@ export default function Header() {
           <ToggleButtons lang={lang} setLang={setLang} theme={theme} toggleTheme={toggleTheme} />
           <Link
             href="/#chat"
-            className="rounded-full bg-accent px-4 py-2 text-sm font-semibold text-canvas no-underline transition-colors hover:bg-accent-hover"
+            className="rounded-full bg-ink px-4 py-2 text-sm font-semibold text-canvas no-underline transition-opacity hover:opacity-90"
           >
             {t("nav.cta")}
           </Link>
@@ -160,7 +160,7 @@ export default function Header() {
               <Link
                 href="/#chat"
                 onClick={() => setMenuOpen(false)}
-                className="mx-2 mt-2 rounded-full bg-accent px-4 py-3 text-center text-sm font-semibold text-canvas no-underline"
+                className="mx-2 mt-2 rounded-full bg-ink px-4 py-3 text-center text-sm font-semibold text-canvas no-underline"
               >
                 {t("nav.cta")}
               </Link>

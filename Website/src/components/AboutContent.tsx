@@ -28,7 +28,7 @@ export default function AboutContent() {
           <p className="mb-4 text-sm uppercase tracking-wider text-accent">
             {t("aboutpage.eyebrow")}
           </p>
-          <h1 className="text-[clamp(2rem,4.5vw+1rem,3.5rem)] font-bold leading-[1.1] tracking-tight">
+          <h1 className="text-[clamp(2rem,4.5vw+1rem,3.5rem)] leading-[1.1] tracking-tight">
             {t("aboutpage.h1")}
           </h1>
         </div>
@@ -79,7 +79,7 @@ export default function AboutContent() {
             <p className="mb-3 text-xs uppercase tracking-wider text-accent">
               {t("aboutpage.not.label")}
             </p>
-            <h2 className="mb-12 max-w-2xl text-3xl font-bold leading-tight tracking-tight md:text-4xl">{t("aboutpage.not.h2")}</h2>
+            <h2 className="mb-12 max-w-2xl text-3xl leading-tight tracking-tight md:text-4xl">{t("aboutpage.not.h2")}</h2>
           </Reveal>
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
             {NOT_LINES.map((key, i) => (
@@ -103,7 +103,7 @@ export default function AboutContent() {
             <p className="mb-3 text-xs uppercase tracking-wider text-accent">
               {t("aboutpage.cta.label")}
             </p>
-            <h2 className="mb-12 text-3xl font-bold leading-tight tracking-tight md:text-4xl">{t("aboutpage.cta.h2")}</h2>
+            <h2 className="mb-12 text-3xl leading-tight tracking-tight md:text-4xl">{t("aboutpage.cta.h2")}</h2>
           </Reveal>
           <Reveal delay={0.1}>
             <HeroVisual variant="gold" hasOpaqueContent>

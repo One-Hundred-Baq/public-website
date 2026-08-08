@@ -19,7 +19,7 @@ export default function CaseStudyContent() {
         <SectionGlow variant="green" />
         <div className="mx-auto max-w-3xl">
           <p className="mb-4 text-sm uppercase tracking-wider text-accent">{t("case.eyebrow")}</p>
-          <h1 className="mb-5 text-[clamp(2rem,4.5vw+1rem,3.25rem)] font-bold leading-[1.1] tracking-tight">
+          <h1 className="mb-5 text-[clamp(2rem,4.5vw+1rem,3.25rem)] leading-[1.1] tracking-tight">
             {t("case.h1")}
           </h1>
           <p className="mx-auto max-w-xl text-lg text-ink-muted">{t("case.sub")}</p>
@@ -33,7 +33,7 @@ export default function CaseStudyContent() {
             <p className="mb-3 text-xs uppercase tracking-wider text-accent">
               {t("case.client.label")}
             </p>
-            <h2 className="mb-12 max-w-2xl text-3xl font-bold leading-tight tracking-tight md:text-4xl">{t("case.client.h2")}</h2>
+            <h2 className="mb-12 max-w-2xl text-3xl leading-tight tracking-tight md:text-4xl">{t("case.client.h2")}</h2>
             <p className="max-w-2xl border-l-2 border-accent pl-4 text-sm text-ink-muted">
               {t("case.client.p")}
             </p>
@@ -48,7 +48,7 @@ export default function CaseStudyContent() {
             <p className="mb-3 text-xs uppercase tracking-wider text-accent">
               {t("case.built.label")}
             </p>
-            <h2 className="mb-12 max-w-2xl text-3xl font-bold leading-tight tracking-tight md:text-4xl">{t("case.built.h2")}</h2>
+            <h2 className="mb-12 max-w-2xl text-3xl leading-tight tracking-tight md:text-4xl">{t("case.built.h2")}</h2>
           </Reveal>
           <motion.div
             className="grid grid-cols-1 gap-7 sm:grid-cols-3"
@@ -87,7 +87,7 @@ export default function CaseStudyContent() {
             <p className="mb-3 text-xs uppercase tracking-wider text-accent">
               {t("case.timeline.label")}
             </p>
-            <h2 className="mb-12 max-w-2xl text-3xl font-bold leading-tight tracking-tight md:text-4xl">{t("case.timeline.h2")}</h2>
+            <h2 className="mb-12 max-w-2xl text-3xl leading-tight tracking-tight md:text-4xl">{t("case.timeline.h2")}</h2>
             <p className="max-w-2xl border-l-2 border-accent pl-4 text-sm text-ink-muted">
               {t("case.timeline.p")}
             </p>
@@ -103,7 +103,7 @@ export default function CaseStudyContent() {
               <p className="mb-3 text-xs uppercase tracking-wider text-accent">
                 {t("case.honest.label")}
               </p>
-              <h2 className="mb-4 text-xl font-bold">{t("case.honest.h2")}</h2>
+              <h2 className="mb-4 text-xl">{t("case.honest.h2")}</h2>
               <p className="mb-3 text-sm text-ink-muted">{t("case.honest.p1")}</p>
               <p className="text-sm text-ink-muted">{t("case.honest.p2")}</p>
             </div>
@@ -118,7 +118,7 @@ export default function CaseStudyContent() {
             <p className="mb-3 text-xs uppercase tracking-wider text-accent">
               {t("case.cta.label")}
             </p>
-            <h2 className="mb-12 text-3xl font-bold leading-tight tracking-tight md:text-4xl">{t("case.cta.h2")}</h2>
+            <h2 className="mb-12 text-3xl leading-tight tracking-tight md:text-4xl">{t("case.cta.h2")}</h2>
           </Reveal>
           <Reveal delay={0.1}>
             <HeroVisual variant="green" hasOpaqueContent>

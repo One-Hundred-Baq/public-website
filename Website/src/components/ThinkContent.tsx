@@ -18,7 +18,7 @@ export default function ThinkContent() {
           <p className="mb-4 text-sm uppercase tracking-wider text-accent">
             {t("thinkpage.eyebrow")}
           </p>
-          <h1 className="mb-5 text-[clamp(2rem,4.5vw+1rem,3.25rem)] font-bold leading-[1.1] tracking-tight">
+          <h1 className="mb-5 text-[clamp(2rem,4.5vw+1rem,3.25rem)] leading-[1.1] tracking-tight">
             {t("thinkpage.h1")}
           </h1>
           <p className="mx-auto max-w-xl text-lg text-ink-muted">{t("thinkpage.sub")}</p>
@@ -35,7 +35,7 @@ export default function ThinkContent() {
                   {String(i + 1).padStart(2, "0")}
                 </span>
                 <div>
-                  <h2 className="mb-3 text-xl font-bold">{t(`thinkpage.${key}.h` as const)}</h2>
+                  <h2 className="mb-3 text-xl">{t(`thinkpage.${key}.h` as const)}</h2>
                   <p className="mb-2 text-sm leading-relaxed text-ink-muted">
                     {t(`thinkpage.${key}.p1` as const)}
                   </p>
@@ -56,10 +56,10 @@ export default function ThinkContent() {
             <p className="mb-3 text-xs uppercase tracking-wider text-accent">
               {t("thinkpage.cta.label")}
             </p>
-            <h2 className="mb-12 text-3xl font-bold leading-tight tracking-tight md:text-4xl">{t("thinkpage.cta.h2")}</h2>
+            <h2 className="mb-12 text-3xl leading-tight tracking-tight md:text-4xl">{t("thinkpage.cta.h2")}</h2>
             <Link
               href="/case-study"
-              className="inline-block rounded-full bg-accent px-6 py-3 text-sm font-semibold text-canvas no-underline transition-colors hover:bg-accent-hover"
+              className="inline-block rounded-full bg-ink px-6 py-3 text-sm font-semibold text-canvas no-underline transition-opacity hover:opacity-90"
             >
               {t("case.eyebrow")} →
             </Link>

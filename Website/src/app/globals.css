@@ -6,21 +6,10 @@
    stay in sync with, the ones previously verified for WCAG AA contrast in
    the static site (Brand/tokens/design-tokens.css is the design source of
    truth). */
+/* Light is now the primary, default experience (per explicit direction —
+   match the Optiv AI reference's editorial light aesthetic). Dark remains a
+   fully supported alternate theme, not a deprecated one. */
 :root {
-  --raw-canvas: #0a0a0b;
-  --raw-surface: #151517;
-  --raw-line: #2a2a2e;
-  --raw-ink: #f5f5f7;
-  --raw-ink-muted: #9a9aa2;
-  --raw-accent: #f5a623;
-  --raw-accent-hover: #ffbb47;
-  --raw-success: #3dd68c;
-  --raw-success-text: #3dd68c;
-  --raw-warning: #f5a623;
-  --raw-danger: #f0554a;
-}
-
-:root[data-theme="light"] {
   --raw-canvas: #faf9f5;
   --raw-surface: #f4f2ec;
   --raw-line: #e5e2d9;
@@ -34,19 +23,33 @@
   --raw-danger: #c93a30;
 }
 
-@media (prefers-color-scheme: light) {
-  :root:not([data-theme="dark"]) {
-    --raw-canvas: #faf9f5;
-    --raw-surface: #f4f2ec;
-    --raw-line: #e5e2d9;
-    --raw-ink: #111113;
-    --raw-ink-muted: #5c5c66;
-    --raw-accent: #96640d;
-    --raw-accent-hover: #7a5209;
-    --raw-success: #1e9e63;
-    --raw-success-text: #146b45;
-    --raw-warning: #96640d;
-    --raw-danger: #c93a30;
+:root[data-theme="dark"] {
+  --raw-canvas: #0a0a0b;
+  --raw-surface: #151517;
+  --raw-line: #2a2a2e;
+  --raw-ink: #f5f5f7;
+  --raw-ink-muted: #9a9aa2;
+  --raw-accent: #f5a623;
+  --raw-accent-hover: #ffbb47;
+  --raw-success: #3dd68c;
+  --raw-success-text: #3dd68c;
+  --raw-warning: #f5a623;
+  --raw-danger: #f0554a;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --raw-canvas: #0a0a0b;
+    --raw-surface: #151517;
+    --raw-line: #2a2a2e;
+    --raw-ink: #f5f5f7;
+    --raw-ink-muted: #9a9aa2;
+    --raw-accent: #f5a623;
+    --raw-accent-hover: #ffbb47;
+    --raw-success: #3dd68c;
+    --raw-success-text: #3dd68c;
+    --raw-warning: #f5a623;
+    --raw-danger: #f0554a;
   }
 }
 
@@ -63,6 +66,7 @@
   --color-warning: var(--raw-warning);
   --color-danger: var(--raw-danger);
   --font-sans: var(--font-rubik);
+  --font-serif: var(--font-instrument-serif);
   --font-logo: var(--font-audiowide);
 }
 
@@ -74,6 +78,15 @@ body {
   background: var(--raw-canvas);
   color: var(--raw-ink);
   font-family: var(--font-rubik), ui-sans-serif, system-ui, sans-serif;
+}
+
+/* Editorial display headings — the single biggest driver of the reference's
+   look. Applied globally to every h1/h2 rather than per-component classes,
+   so the whole site's headline voice is consistent by construction. */
+h1,
+h2 {
+  font-family: var(--font-instrument-serif), Georgia, "Times New Roman", serif;
+  font-weight: 400;
 }
 
 @media (prefers-reduced-motion: reduce) {
