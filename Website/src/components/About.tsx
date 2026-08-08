@@ -39,7 +39,7 @@ export default function About() {
           </div>
 
           <Reveal delay={0.15}>
-            <HeroVisual variant="warm">
+            <HeroVisual variant="warm" hasOpaqueContent={false}>
               <p className="text-xl font-medium leading-snug md:text-2xl">
                 &ldquo;{t("aboutpage.manifesto1")}&rdquo;
               </p>

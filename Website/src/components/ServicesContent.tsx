@@ -132,7 +132,7 @@ export default function ServicesContent() {
             <h2 className="mb-12 text-3xl font-bold leading-tight tracking-tight md:text-4xl">{t("services.cta.h2")}</h2>
           </Reveal>
           <Reveal delay={0.1}>
-            <HeroVisual variant="green">
+            <HeroVisual variant="green" hasOpaqueContent>
               <ChatPanel />
             </HeroVisual>
           </Reveal>

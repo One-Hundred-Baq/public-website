@@ -106,7 +106,7 @@ export default function AboutContent() {
             <h2 className="mb-12 text-3xl font-bold leading-tight tracking-tight md:text-4xl">{t("aboutpage.cta.h2")}</h2>
           </Reveal>
           <Reveal delay={0.1}>
-            <HeroVisual variant="gold">
+            <HeroVisual variant="gold" hasOpaqueContent>
               <ChatPanel />
             </HeroVisual>
           </Reveal>

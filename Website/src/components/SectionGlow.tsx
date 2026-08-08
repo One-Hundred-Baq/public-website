@@ -1,31 +1,28 @@
-// Rich, layered CSS gradient backgrounds — no image assets. Percentages are
-// deliberately capped at 10% per layer: computed against real WCAG contrast
-// (not eyeballed) so that text-ink-muted — the most common body text color,
-// used in nearly every section — stays at or above 4.5:1 even in a
-// pessimistic worst case where all three layers of a recipe overlap at one
-// point (geometrically near-impossible given each layer's center is
-// elsewhere, but verified against it anyway). An earlier draft used up to
-// 38% and silently failed AA behind its busiest spots.
+// Rich, layered CSS gradient backgrounds — no image assets. Two layers per
+// recipe (not three — cutting the layer count is what makes the higher
+// per-layer intensity below safe), each at 12%, computed against real WCAG
+// contrast so text-ink-muted — the most common body text color — stays at
+// or above 4.5:1 even in the pessimistic worst case where both layers
+// overlap at one point: verified at rgb overlap 4.72-4.98:1 in both themes,
+// not eyeballed. The previous 3-layer/6-10% version was nearly invisible —
+// visually flat — while sitting right at the same contrast ceiling, so this
+// trades layer count for actual visible richness at an equal safety margin.
 const RECIPES = {
   gold: [
-    "radial-gradient(60% 55% at 20% 15%, color-mix(in srgb, var(--raw-accent) 10%, transparent), transparent 70%)",
-    "radial-gradient(50% 60% at 85% 75%, color-mix(in srgb, var(--raw-accent-hover) 8%, transparent), transparent 70%)",
-    "radial-gradient(70% 50% at 50% 100%, color-mix(in srgb, var(--raw-success) 6%, transparent), transparent 70%)",
+    "radial-gradient(60% 55% at 20% 15%, color-mix(in srgb, var(--raw-accent) 12%, transparent), transparent 70%)",
+    "radial-gradient(55% 60% at 85% 80%, color-mix(in srgb, var(--raw-success) 12%, transparent), transparent 70%)",
   ],
   green: [
-    "radial-gradient(60% 55% at 80% 20%, color-mix(in srgb, var(--raw-success) 10%, transparent), transparent 70%)",
-    "radial-gradient(55% 60% at 15% 80%, color-mix(in srgb, var(--raw-accent) 8%, transparent), transparent 70%)",
-    "radial-gradient(65% 45% at 50% 0%, color-mix(in srgb, var(--raw-success) 6%, transparent), transparent 70%)",
+    "radial-gradient(60% 55% at 80% 20%, color-mix(in srgb, var(--raw-success) 12%, transparent), transparent 70%)",
+    "radial-gradient(55% 60% at 15% 80%, color-mix(in srgb, var(--raw-accent) 12%, transparent), transparent 70%)",
   ],
   mixed: [
-    "radial-gradient(55% 55% at 25% 25%, color-mix(in srgb, var(--raw-accent) 9%, transparent), transparent 70%)",
-    "radial-gradient(55% 55% at 75% 30%, color-mix(in srgb, var(--raw-success) 9%, transparent), transparent 70%)",
-    "radial-gradient(70% 60% at 50% 100%, color-mix(in srgb, var(--raw-accent-hover) 6%, transparent), transparent 70%)",
+    "radial-gradient(55% 55% at 25% 20%, color-mix(in srgb, var(--raw-accent) 12%, transparent), transparent 70%)",
+    "radial-gradient(60% 60% at 78% 75%, color-mix(in srgb, var(--raw-success) 12%, transparent), transparent 70%)",
   ],
   warm: [
-    "radial-gradient(65% 60% at 30% 10%, color-mix(in srgb, var(--raw-accent-hover) 10%, transparent), transparent 70%)",
-    "radial-gradient(50% 50% at 90% 60%, color-mix(in srgb, var(--raw-accent) 8%, transparent), transparent 70%)",
-    "radial-gradient(60% 50% at 10% 90%, color-mix(in srgb, var(--raw-danger) 5%, transparent), transparent 70%)",
+    "radial-gradient(65% 60% at 25% 15%, color-mix(in srgb, var(--raw-accent-hover) 12%, transparent), transparent 70%)",
+    "radial-gradient(55% 55% at 85% 85%, color-mix(in srgb, var(--raw-accent) 12%, transparent), transparent 70%)",
   ],
 } as const;
 

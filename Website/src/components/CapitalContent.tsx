@@ -145,7 +145,7 @@ export default function CapitalContent() {
             <h2 className="mb-12 text-3xl font-bold leading-tight tracking-tight md:text-4xl">{t("capital.cta.h2")}</h2>
           </Reveal>
           <Reveal delay={0.1}>
-            <HeroVisual variant="mixed">
+            <HeroVisual variant="mixed" hasOpaqueContent>
               <ChatPanel />
             </HeroVisual>
           </Reveal>
