@@ -3,7 +3,7 @@
 import { motion, useReducedMotion } from "framer-motion";
 import { useSite } from "@/lib/providers";
 import Reveal from "./Reveal";
-import GradientGlow from "./GradientGlow";
+import AtmosphereBg from "./AtmosphereBg";
 import ChatPanel from "./ChatPanel";
 import HeroVisual from "./HeroVisual";
 
@@ -17,7 +17,7 @@ export default function ServicesContent() {
   return (
     <main id="main" className="flex-1">
       <section className="relative px-6 pb-16 pt-20 text-center md:pt-28">
-        <GradientGlow variant="hero" />
+        <AtmosphereBg variant="green" />
         <div className="mx-auto max-w-3xl">
           <p className="mb-4 text-sm uppercase tracking-wider text-accent">
             {t("services.eyebrow")}
@@ -120,7 +120,7 @@ export default function ServicesContent() {
 
       {/* CTA — the agent itself */}
       <section className="relative border-t border-line py-16">
-        <GradientGlow variant="section" />
+        <AtmosphereBg variant="green" />
         <div className="mx-auto max-w-3xl px-6 text-center">
           <Reveal>
             <p className="mb-3 text-xs uppercase tracking-wider text-accent">
@@ -129,7 +129,7 @@ export default function ServicesContent() {
             <h2 className="mb-10 text-2xl font-bold">{t("services.cta.h2")}</h2>
           </Reveal>
           <Reveal delay={0.1}>
-            <HeroVisual>
+            <HeroVisual variant="green">
               <ChatPanel />
             </HeroVisual>
           </Reveal>

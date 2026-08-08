@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { motion, useReducedMotion } from "framer-motion";
 import { useSite } from "@/lib/providers";
 import Reveal from "./Reveal";
@@ -53,6 +54,14 @@ export default function Proof() {
           <p className="max-w-2xl border-l-2 border-accent pl-4 text-sm text-ink-muted">
             {t("proof.note")}
           </p>
+        </Reveal>
+        <Reveal delay={0.1}>
+          <Link
+            href="/case-study"
+            className="mt-6 inline-block text-sm font-semibold text-accent no-underline hover:text-accent-hover"
+          >
+            {t("case.eyebrow")} →
+          </Link>
         </Reveal>
       </div>
     </section>

@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { motion, useReducedMotion } from "framer-motion";
 import { useSite } from "@/lib/providers";
 import Reveal from "./Reveal";
@@ -48,6 +49,15 @@ export default function HowWeThink() {
             </motion.div>
           ))}
         </motion.div>
+
+        <Reveal delay={0.1}>
+          <Link
+            href="/how-we-think"
+            className="mt-8 inline-block text-sm font-semibold text-accent no-underline hover:text-accent-hover"
+          >
+            {t("think.readmore")} →
+          </Link>
+        </Reveal>
       </div>
     </section>
   );
