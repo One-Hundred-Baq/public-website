@@ -34,7 +34,7 @@ export default function AboutContent() {
         </div>
       </section>
 
-      <section className="relative border-t border-line py-16">
+      <section className="relative border-t border-line py-24 lg:py-32">
         <SectionGlow variant="green" />
         <div className="mx-auto grid max-w-6xl gap-8 px-6 sm:grid-cols-2">
           <Reveal>
@@ -52,7 +52,7 @@ export default function AboutContent() {
         </div>
       </section>
 
-      <section className="relative border-t border-line py-16">
+      <section className="relative border-t border-line py-24 lg:py-32">
         <SectionGlow variant="mixed" />
         <div className="mx-auto max-w-3xl px-6">
           <Reveal>
@@ -72,14 +72,14 @@ export default function AboutContent() {
         </div>
       </section>
 
-      <section className="relative border-t border-line py-16">
+      <section className="relative border-t border-line py-24 lg:py-32">
         <SectionGlow variant="warm" />
         <div className="mx-auto max-w-6xl px-6">
           <Reveal>
             <p className="mb-3 text-xs uppercase tracking-wider text-accent">
               {t("aboutpage.not.label")}
             </p>
-            <h2 className="mb-8 max-w-2xl text-2xl font-bold">{t("aboutpage.not.h2")}</h2>
+            <h2 className="mb-12 max-w-2xl text-3xl font-bold leading-tight tracking-tight md:text-4xl">{t("aboutpage.not.h2")}</h2>
           </Reveal>
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
             {NOT_LINES.map((key, i) => (
@@ -96,14 +96,14 @@ export default function AboutContent() {
         </div>
       </section>
 
-      <section className="relative border-t border-line py-16">
+      <section className="relative border-t border-line py-24 lg:py-32">
         <SectionGlow variant="gold" />
         <div className="mx-auto max-w-3xl px-6 text-center">
           <Reveal>
             <p className="mb-3 text-xs uppercase tracking-wider text-accent">
               {t("aboutpage.cta.label")}
             </p>
-            <h2 className="mb-10 text-2xl font-bold">{t("aboutpage.cta.h2")}</h2>
+            <h2 className="mb-12 text-3xl font-bold leading-tight tracking-tight md:text-4xl">{t("aboutpage.cta.h2")}</h2>
           </Reveal>
           <Reveal delay={0.1}>
             <HeroVisual variant="gold">

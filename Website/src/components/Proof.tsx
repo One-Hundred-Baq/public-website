@@ -17,18 +17,20 @@ export default function Proof() {
   ];
 
   return (
-    <section id="proof" className="relative border-t border-line py-20">
+    <section id="proof" className="relative overflow-hidden border-t border-line bg-surface py-28 lg:py-36">
       <SectionGlow variant="green" />
       <div className="mx-auto max-w-6xl px-6">
         <Reveal>
-          <p className="mb-3 text-xs uppercase tracking-wider text-accent">
+          <p className="mb-4 text-xs uppercase tracking-wider text-accent">
             {t("proof.label")}
           </p>
-          <h2 className="mb-10 max-w-2xl text-2xl font-bold">{t("proof.h2")}</h2>
+          <h2 className="mb-16 max-w-2xl text-3xl font-bold leading-tight tracking-tight md:text-4xl">
+            {t("proof.h2")}
+          </h2>
         </Reveal>
 
         <motion.div
-          className="mb-10 grid grid-cols-1 gap-5 sm:grid-cols-3"
+          className="mb-16 grid grid-cols-1 gap-8 sm:grid-cols-3 lg:gap-12"
           initial="hidden"
           whileInView="show"
           viewport={{ once: true, margin: "-80px" }}
@@ -44,18 +46,18 @@ export default function Proof() {
                 hidden: { opacity: 0, scale: 0.94, y: 12 },
                 show: { opacity: 1, scale: 1, y: 0, transition: { duration: 0.4 } },
               }}
-              className="rounded-xl border border-line bg-surface p-6"
+              className="border-t-2 border-accent pt-6"
             >
-              <span className="mb-2 block text-2xl text-accent">{s.num}</span>
-              <span className="text-sm text-ink-muted">{s.label}</span>
+              <span className="mb-3 block text-5xl font-bold tracking-tight text-accent md:text-6xl">
+                {s.num}
+              </span>
+              <span className="text-sm leading-relaxed text-ink-muted">{s.label}</span>
             </motion.div>
           ))}
         </motion.div>
 
         <Reveal>
-          <p className="max-w-2xl border-l-2 border-accent pl-4 text-sm text-ink-muted">
-            {t("proof.note")}
-          </p>
+          <p className="max-w-2xl text-base leading-relaxed text-ink-muted">{t("proof.note")}</p>
         </Reveal>
         <Reveal delay={0.1}>
           <Link

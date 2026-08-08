@@ -26,14 +26,14 @@ export default function CaseStudyContent() {
         </div>
       </section>
 
-      <section className="relative border-t border-line py-16">
+      <section className="relative border-t border-line py-24 lg:py-32">
         <SectionGlow variant="gold" />
         <div className="mx-auto max-w-6xl px-6">
           <Reveal>
             <p className="mb-3 text-xs uppercase tracking-wider text-accent">
               {t("case.client.label")}
             </p>
-            <h2 className="mb-6 max-w-2xl text-2xl font-bold">{t("case.client.h2")}</h2>
+            <h2 className="mb-12 max-w-2xl text-3xl font-bold leading-tight tracking-tight md:text-4xl">{t("case.client.h2")}</h2>
             <p className="max-w-2xl border-l-2 border-accent pl-4 text-sm text-ink-muted">
               {t("case.client.p")}
             </p>
@@ -41,17 +41,17 @@ export default function CaseStudyContent() {
         </div>
       </section>
 
-      <section className="relative border-t border-line py-16">
+      <section className="relative border-t border-line py-24 lg:py-32">
         <SectionGlow variant="mixed" />
         <div className="mx-auto max-w-6xl px-6">
           <Reveal>
             <p className="mb-3 text-xs uppercase tracking-wider text-accent">
               {t("case.built.label")}
             </p>
-            <h2 className="mb-10 max-w-2xl text-2xl font-bold">{t("case.built.h2")}</h2>
+            <h2 className="mb-12 max-w-2xl text-3xl font-bold leading-tight tracking-tight md:text-4xl">{t("case.built.h2")}</h2>
           </Reveal>
           <motion.div
-            className="grid grid-cols-1 gap-5 sm:grid-cols-3"
+            className="grid grid-cols-1 gap-7 sm:grid-cols-3"
             initial="hidden"
             whileInView="show"
             viewport={{ once: true, margin: "-80px" }}
@@ -67,7 +67,7 @@ export default function CaseStudyContent() {
                   hidden: { opacity: 0, y: 16 },
                   show: { opacity: 1, y: 0, transition: { duration: 0.4 } },
                 }}
-                className="rounded-xl border border-line bg-surface p-6"
+                className="rounded-2xl border border-line bg-surface p-7"
               >
                 <span className="mb-3 block text-sm text-accent">
                   {String(i + 1).padStart(2, "0")}
@@ -80,14 +80,14 @@ export default function CaseStudyContent() {
         </div>
       </section>
 
-      <section className="relative border-t border-line py-16">
+      <section className="relative border-t border-line py-24 lg:py-32">
         <SectionGlow variant="warm" />
         <div className="mx-auto max-w-6xl px-6">
           <Reveal>
             <p className="mb-3 text-xs uppercase tracking-wider text-accent">
               {t("case.timeline.label")}
             </p>
-            <h2 className="mb-6 max-w-2xl text-2xl font-bold">{t("case.timeline.h2")}</h2>
+            <h2 className="mb-12 max-w-2xl text-3xl font-bold leading-tight tracking-tight md:text-4xl">{t("case.timeline.h2")}</h2>
             <p className="max-w-2xl border-l-2 border-accent pl-4 text-sm text-ink-muted">
               {t("case.timeline.p")}
             </p>
@@ -95,7 +95,7 @@ export default function CaseStudyContent() {
         </div>
       </section>
 
-      <section className="relative border-t border-line py-16">
+      <section className="relative border-t border-line py-24 lg:py-32">
         <SectionGlow variant="green" />
         <div className="mx-auto max-w-3xl px-6">
           <Reveal>
@@ -111,14 +111,14 @@ export default function CaseStudyContent() {
         </div>
       </section>
 
-      <section className="relative border-t border-line py-16">
+      <section className="relative border-t border-line py-24 lg:py-32">
         <SectionGlow variant="green" />
         <div className="mx-auto max-w-3xl px-6 text-center">
           <Reveal>
             <p className="mb-3 text-xs uppercase tracking-wider text-accent">
               {t("case.cta.label")}
             </p>
-            <h2 className="mb-10 text-2xl font-bold">{t("case.cta.h2")}</h2>
+            <h2 className="mb-12 text-3xl font-bold leading-tight tracking-tight md:text-4xl">{t("case.cta.h2")}</h2>
           </Reveal>
           <Reveal delay={0.1}>
             <HeroVisual variant="green">

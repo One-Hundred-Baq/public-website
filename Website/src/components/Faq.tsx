@@ -19,14 +19,16 @@ export default function Faq() {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   return (
-    <section id="faq" className="relative border-t border-line py-20">
+    <section id="faq" className="relative overflow-hidden border-t border-line py-28 lg:py-36">
       <SectionGlow variant="gold" />
       <div className="mx-auto max-w-6xl px-6">
         <Reveal>
-          <p className="mb-3 text-xs uppercase tracking-wider text-accent">
+          <p className="mb-4 text-xs uppercase tracking-wider text-accent">
             {t("faq.label")}
           </p>
-          <h2 className="mb-8 max-w-2xl text-2xl font-bold">{t("faq.h2")}</h2>
+          <h2 className="mb-16 max-w-2xl text-3xl font-bold leading-tight tracking-tight md:text-4xl">
+            {t("faq.h2")}
+          </h2>
         </Reveal>
 
         <div className="max-w-2xl">
@@ -60,7 +62,7 @@ function FaqItem({
   const prefersReducedMotion = useReducedMotion();
 
   return (
-    <div className="border-b border-line py-5">
+    <div className="border-b border-line py-7">
       <button
         type="button"
         aria-expanded={isOpen}

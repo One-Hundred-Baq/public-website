@@ -25,7 +25,7 @@ export default function ThinkContent() {
         </div>
       </section>
 
-      <section className="relative border-t border-line py-16">
+      <section className="relative border-t border-line py-24 lg:py-32">
         <SectionGlow variant="green" />
         <div className="mx-auto max-w-4xl px-6 space-y-12">
           {PRINCIPLES.map((key, i) => (
@@ -49,14 +49,14 @@ export default function ThinkContent() {
         </div>
       </section>
 
-      <section className="relative border-t border-line py-16 text-center">
+      <section className="relative border-t border-line py-24 lg:py-32 text-center">
         <SectionGlow variant="mixed" />
         <div className="mx-auto max-w-3xl px-6">
           <Reveal>
             <p className="mb-3 text-xs uppercase tracking-wider text-accent">
               {t("thinkpage.cta.label")}
             </p>
-            <h2 className="mb-8 text-2xl font-bold">{t("thinkpage.cta.h2")}</h2>
+            <h2 className="mb-12 text-3xl font-bold leading-tight tracking-tight md:text-4xl">{t("thinkpage.cta.h2")}</h2>
             <Link
               href="/case-study"
               className="inline-block rounded-full bg-accent px-6 py-3 text-sm font-semibold text-canvas no-underline transition-colors hover:bg-accent-hover"

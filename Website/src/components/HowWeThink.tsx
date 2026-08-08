@@ -13,18 +13,20 @@ export default function HowWeThink() {
   const prefersReducedMotion = useReducedMotion();
 
   return (
-    <section id="think" className="relative border-t border-line py-20">
+    <section id="think" className="relative overflow-hidden border-t border-line py-28 lg:py-36">
       <SectionGlow variant="mixed" />
       <div className="mx-auto max-w-6xl px-6">
         <Reveal>
-          <p className="mb-3 text-xs uppercase tracking-wider text-accent">
+          <p className="mb-4 text-xs uppercase tracking-wider text-accent">
             {t("think.label")}
           </p>
-          <h2 className="mb-10 max-w-2xl text-2xl font-bold">{t("think.h2")}</h2>
+          <h2 className="mb-16 max-w-2xl text-3xl font-bold leading-tight tracking-tight md:text-4xl">
+            {t("think.h2")}
+          </h2>
         </Reveal>
 
         <motion.div
-          className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3"
+          className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 lg:gap-8"
           initial="hidden"
           whileInView="show"
           viewport={{ once: true, margin: "-80px" }}
@@ -41,13 +43,17 @@ export default function HowWeThink() {
                 show: { opacity: 1, y: 0, transition: { duration: 0.4 } },
               }}
               whileHover={prefersReducedMotion ? undefined : { y: -4 }}
-              className="rounded-xl border border-line bg-surface p-6 transition-colors hover:border-accent/50"
+              className="rounded-2xl border border-line bg-surface p-8 transition-colors hover:border-accent/50"
             >
-              <span className="mb-3 block text-sm text-accent">
+              <span className="mb-5 block text-sm text-accent">
                 {String(i + 1).padStart(2, "0")}
               </span>
-              <h3 className="mb-2 text-base font-semibold">{t(`think.${key}.h` as const)}</h3>
-              <p className="text-sm text-ink-muted">{t(`think.${key}.p` as const)}</p>
+              <h3 className="mb-3 text-lg font-semibold leading-snug">
+                {t(`think.${key}.h` as const)}
+              </h3>
+              <p className="text-sm leading-relaxed text-ink-muted">
+                {t(`think.${key}.p` as const)}
+              </p>
             </motion.div>
           ))}
         </motion.div>
@@ -55,7 +61,7 @@ export default function HowWeThink() {
         <Reveal delay={0.1}>
           <Link
             href="/how-we-think"
-            className="mt-8 inline-block text-sm font-semibold text-accent no-underline hover:text-accent-hover"
+            className="mt-10 inline-block text-sm font-semibold text-accent no-underline hover:text-accent-hover"
           >
             {t("think.readmore")} →
           </Link>

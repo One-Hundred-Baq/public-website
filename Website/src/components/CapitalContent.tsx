@@ -34,14 +34,14 @@ export default function CapitalContent() {
         </div>
       </section>
 
-      <section className="relative border-t border-line py-16">
+      <section className="relative border-t border-line py-24 lg:py-32">
         <SectionGlow variant="green" />
         <div className="mx-auto max-w-6xl px-6">
           <Reveal>
             <p className="mb-3 text-xs uppercase tracking-wider text-accent">
               {t("capital.what.label")}
             </p>
-            <h2 className="mb-6 max-w-2xl text-2xl font-bold">{t("capital.what.h2")}</h2>
+            <h2 className="mb-12 max-w-2xl text-3xl font-bold leading-tight tracking-tight md:text-4xl">{t("capital.what.h2")}</h2>
             <p className="max-w-2xl border-l-2 border-accent pl-4 text-sm text-ink-muted">
               {t("capital.what.p")}
             </p>
@@ -49,17 +49,17 @@ export default function CapitalContent() {
         </div>
       </section>
 
-      <section className="relative border-t border-line py-16">
+      <section className="relative border-t border-line py-24 lg:py-32">
         <SectionGlow variant="gold" />
         <div className="mx-auto max-w-6xl px-6">
           <Reveal>
             <p className="mb-3 text-xs uppercase tracking-wider text-accent">
               {t("capital.funds.label")}
             </p>
-            <h2 className="mb-10 max-w-2xl text-2xl font-bold">{t("capital.funds.h2")}</h2>
+            <h2 className="mb-12 max-w-2xl text-3xl font-bold leading-tight tracking-tight md:text-4xl">{t("capital.funds.h2")}</h2>
           </Reveal>
           <motion.div
-            className="grid grid-cols-1 gap-5 sm:grid-cols-2"
+            className="grid grid-cols-1 gap-7 sm:grid-cols-2"
             initial="hidden"
             whileInView="show"
             viewport={{ once: true, margin: "-80px" }}
@@ -75,7 +75,7 @@ export default function CapitalContent() {
                   hidden: { opacity: 0, y: 16 },
                   show: { opacity: 1, y: 0, transition: { duration: 0.4 } },
                 }}
-                className="rounded-xl border border-line bg-surface p-6"
+                className="rounded-2xl border border-line bg-surface p-7"
               >
                 <h3 className="mb-2 text-base font-semibold">
                   {t(`capital.${key}.h` as const)}
@@ -87,14 +87,14 @@ export default function CapitalContent() {
         </div>
       </section>
 
-      <section className="relative border-t border-line py-16">
+      <section className="relative border-t border-line py-24 lg:py-32">
         <SectionGlow variant="mixed" />
         <div className="mx-auto max-w-6xl px-6">
           <Reveal>
             <p className="mb-3 text-xs uppercase tracking-wider text-accent">
               {t("capital.milestones.label")}
             </p>
-            <h2 className="mb-8 max-w-2xl text-2xl font-bold">{t("capital.milestones.h2")}</h2>
+            <h2 className="mb-12 max-w-2xl text-3xl font-bold leading-tight tracking-tight md:text-4xl">{t("capital.milestones.h2")}</h2>
           </Reveal>
           <div className="max-w-2xl space-y-4">
             {MILESTONES.map((key, i) => (
@@ -111,7 +111,7 @@ export default function CapitalContent() {
         </div>
       </section>
 
-      <section className="relative border-t border-line py-16">
+      <section className="relative border-t border-line py-24 lg:py-32">
         <SectionGlow variant="warm" />
         <div className="mx-auto max-w-3xl px-6">
           <Reveal>
@@ -135,14 +135,14 @@ export default function CapitalContent() {
         </div>
       </section>
 
-      <section className="relative border-t border-line py-16">
+      <section className="relative border-t border-line py-24 lg:py-32">
         <SectionGlow variant="mixed" />
         <div className="mx-auto max-w-3xl px-6 text-center">
           <Reveal>
             <p className="mb-3 text-xs uppercase tracking-wider text-accent">
               {t("capital.cta.label")}
             </p>
-            <h2 className="mb-10 text-2xl font-bold">{t("capital.cta.h2")}</h2>
+            <h2 className="mb-12 text-3xl font-bold leading-tight tracking-tight md:text-4xl">{t("capital.cta.h2")}</h2>
           </Reveal>
           <Reveal delay={0.1}>
             <HeroVisual variant="mixed">

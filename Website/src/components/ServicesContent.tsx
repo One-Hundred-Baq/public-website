@@ -30,7 +30,7 @@ export default function ServicesContent() {
       </section>
 
       {/* Flagship package — marketplace-style listing */}
-      <section className="relative border-t border-line py-16">
+      <section className="relative border-t border-line py-24 lg:py-32">
         <SectionGlow variant="gold" />
         <div className="mx-auto max-w-4xl px-6">
           <Reveal>
@@ -45,7 +45,7 @@ export default function ServicesContent() {
           </Reveal>
 
           <motion.div
-            className="mt-6 grid grid-cols-1 gap-5 sm:grid-cols-2"
+            className="mt-6 grid grid-cols-1 gap-7 sm:grid-cols-2"
             initial="hidden"
             whileInView="show"
             viewport={{ once: true, margin: "-80px" }}
@@ -78,14 +78,14 @@ export default function ServicesContent() {
       </section>
 
       {/* Delivery steps */}
-      <section className="relative border-t border-line py-16">
+      <section className="relative border-t border-line py-24 lg:py-32">
         <SectionGlow variant="mixed" />
         <div className="mx-auto max-w-6xl px-6">
           <Reveal>
             <p className="mb-3 text-xs uppercase tracking-wider text-accent">
               {t("services.delivery.label")}
             </p>
-            <h2 className="mb-10 max-w-2xl text-2xl font-bold">{t("services.delivery.h2")}</h2>
+            <h2 className="mb-12 max-w-2xl text-3xl font-bold leading-tight tracking-tight md:text-4xl">{t("services.delivery.h2")}</h2>
           </Reveal>
           <div className="grid grid-cols-1 gap-8 sm:grid-cols-3">
             {STEPS.map((key, i) => (
@@ -106,14 +106,14 @@ export default function ServicesContent() {
       </section>
 
       {/* Pricing honesty */}
-      <section className="relative border-t border-line py-16">
+      <section className="relative border-t border-line py-24 lg:py-32">
         <SectionGlow variant="warm" />
         <div className="mx-auto max-w-6xl px-6">
           <Reveal>
             <p className="mb-3 text-xs uppercase tracking-wider text-accent">
               {t("services.pricing.label")}
             </p>
-            <h2 className="mb-6 max-w-2xl text-2xl font-bold">{t("services.pricing.h2")}</h2>
+            <h2 className="mb-12 max-w-2xl text-3xl font-bold leading-tight tracking-tight md:text-4xl">{t("services.pricing.h2")}</h2>
             <p className="max-w-2xl border-l-2 border-accent pl-4 text-sm text-ink-muted">
               {t("services.pricing.p")}
             </p>
@@ -122,14 +122,14 @@ export default function ServicesContent() {
       </section>
 
       {/* CTA — the agent itself */}
-      <section className="relative border-t border-line py-16">
+      <section className="relative border-t border-line py-24 lg:py-32">
         <SectionGlow variant="green" />
         <div className="mx-auto max-w-3xl px-6 text-center">
           <Reveal>
             <p className="mb-3 text-xs uppercase tracking-wider text-accent">
               {t("services.cta.label")}
             </p>
-            <h2 className="mb-10 text-2xl font-bold">{t("services.cta.h2")}</h2>
+            <h2 className="mb-12 text-3xl font-bold leading-tight tracking-tight md:text-4xl">{t("services.cta.h2")}</h2>
           </Reveal>
           <Reveal delay={0.1}>
             <HeroVisual variant="green">
